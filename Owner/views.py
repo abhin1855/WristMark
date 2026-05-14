@@ -6,3 +6,6 @@ def dasboard_page(request):
 
 def demo_page(request):
     return render(request,"demo_page.html")
+
+def watch_page(request):
+    return render(request,"Watch.html")

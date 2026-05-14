@@ -1,0 +1,354 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Store Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <i class="ri-time-line"></i>
+                    Watches
+                </li>
+
+                <li>
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                </li>
+
+                <li>
+                    <i class="ri-group-line"></i>
+                    Buyers
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <i class="ri-user-line"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h2>Watches</h2>
+                <span>/</span>
+                <p>Overview</p>
+            </div>
+
+            <div class="topbar-right">
+                <p>Wed, 13 May 2026</p>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+<!--        <div class="stats-grid">-->
+
+<!--            <div class="stat-card revenue">-->
+<!--                <div>-->
+<!--                    <p></p>-->
+<!--                    <h2></h2>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+
+<!--                <i class="ri-money-dollar-circle-line"></i>-->
+<!--            </div>-->
+
+<!--            <div class="stat-card orders">-->
+<!--                <div>-->
+<!--                    <p></p>-->
+<!--                    <h2></h2>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+
+<!--                <i class="ri-shopping-bag-line"></i>-->
+<!--            </div>-->
+
+<!--            <div class="stat-card watches">-->
+<!--                <div>-->
+<!--                    <p></p>-->
+<!--                    <h2></h2>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+
+<!--                <i class="ri-focus-2-line"></i>-->
+<!--            </div>-->
+
+<!--            <div class="stat-card buyers">-->
+<!--                <div>-->
+<!--                    <p></p>-->
+<!--                    <h2></h2>-->
+<!--                    <span></span>-->
+<!--                </div>-->
+
+<!--                <i class="ri-user-3-line"></i>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!-- WATCH LIST SECTION -->
+
+<h3 class="section-title">WATCH COLLECTION</h3>
+
+<div class="watch-grid">
+
+    <!-- WATCH CARD -->
+    <div class="watch-card">
+
+        <div class="watch-image">
+            <img src="{% static 'images/watch1.png' %}" alt="Watch">
+        </div>
+
+        <div class="watch-content">
+
+            <div class="watch-top">
+                <h4>Rolex Submariner</h4>
+
+                <span class="stock in-stock">
+                    In Stock
+                </span>
+            </div>
+
+            <p class="watch-brand">
+                Luxury Automatic Watch
+            </p>
+
+            <div class="watch-details">
+
+                <div>
+                    <small>Price</small>
+                    <h5>₹4,25,000</h5>
+                </div>
+
+                <div>
+                    <small>Stock</small>
+                    <h5>12</h5>
+                </div>
+
+            </div>
+
+            <div class="watch-actions">
+
+                <button class="edit-btn">
+                    <i class="ri-edit-line"></i>
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    <i class="ri-delete-bin-line"></i>
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- WATCH CARD -->
+    <div class="watch-card">
+
+        <div class="watch-image">
+            <img src="{% static 'images/watch2.png' %}" alt="Watch">
+        </div>
+
+        <div class="watch-content">
+
+            <div class="watch-top">
+                <h4>Casio G-Shock</h4>
+
+                <span class="stock low-stock">
+                    Low Stock
+                </span>
+            </div>
+
+            <p class="watch-brand">
+                Sports Digital Watch
+            </p>
+
+            <div class="watch-details">
+
+                <div>
+                    <small>Price</small>
+                    <h5>₹8,500</h5>
+                </div>
+
+                <div>
+                    <small>Stock</small>
+                    <h5>3</h5>
+                </div>
+
+            </div>
+
+            <div class="watch-actions">
+
+                <button class="edit-btn">
+                    <i class="ri-edit-line"></i>
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    <i class="ri-delete-bin-line"></i>
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- WATCH CARD -->
+    <div class="watch-card">
+
+        <div class="watch-image">
+            <img src="{% static 'images/watch3.png' %}" alt="Watch">
+        </div>
+
+        <div class="watch-content">
+
+            <div class="watch-top">
+                <h4>Titan Edge</h4>
+
+                <span class="stock in-stock">
+                    In Stock
+                </span>
+            </div>
+
+            <p class="watch-brand">
+                Slim Premium Watch
+            </p>
+
+            <div class="watch-details">
+
+                <div>
+                    <small>Price</small>
+                    <h5>₹14,999</h5>
+                </div>
+
+                <div>
+                    <small>Stock</small>
+                    <h5>8</h5>
+                </div>
+
+            </div>
+
+            <div class="watch-actions">
+
+                <button class="edit-btn">
+                    <i class="ri-edit-line"></i>
+                    Edit
+                </button>
+
+                <button class="delete-btn">
+                    <i class="ri-delete-bin-line"></i>
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>
