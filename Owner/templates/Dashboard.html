@@ -1,0 +1,331 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Store Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li class="active">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                </li>
+
+                <li>
+                    <i class="ri-time-line"></i>
+                    Watches
+                </li>
+
+                <li>
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                </li>
+
+                <li>
+                    <i class="ri-group-line"></i>
+                    Buyers
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <i class="ri-user-line"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h2>Dashboard</h2>
+                <span>/</span>
+                <p>Overview</p>
+            </div>
+
+            <div class="topbar-right">
+                <p>Wed, 13 May 2026</p>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+            <div class="stat-card revenue">
+                <div>
+                    <p>TOTAL REVENUE</p>
+                    <h2>₹4.2L</h2>
+                    <span>↑ 12% this month</span>
+                </div>
+
+                <i class="ri-money-dollar-circle-line"></i>
+            </div>
+
+            <div class="stat-card orders">
+                <div>
+                    <p>ORDERS TODAY</p>
+                    <h2>18</h2>
+                    <span>↑ 4 from yesterday</span>
+                </div>
+
+                <i class="ri-shopping-bag-line"></i>
+            </div>
+
+            <div class="stat-card watches">
+                <div>
+                    <p>WATCHES LISTED</p>
+                    <h2>84</h2>
+                    <span>3 out of stock</span>
+                </div>
+
+                <i class="ri-focus-2-line"></i>
+            </div>
+
+            <div class="stat-card buyers">
+                <div>
+                    <p>TOTAL BUYERS</p>
+                    <h2>312</h2>
+                    <span>↑ 21 this week</span>
+                </div>
+
+                <i class="ri-user-3-line"></i>
+            </div>
+
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <h3 class="section-title">QUICK ACTIONS</h3>
+
+        <div class="action-grid">
+
+            <div class="action-card">
+                <div class="icon green">
+                    <i class="ri-add-circle-line"></i>
+                </div>
+
+                <h4>Add watch</h4>
+                <p>List a new watch in the catalog</p>
+            </div>
+
+            <div class="action-card">
+                <div class="icon orange">
+                    <i class="ri-file-list-3-line"></i>
+                </div>
+
+                <h4>Manage orders</h4>
+                <p>Update status, handle issues</p>
+            </div>
+
+            <div class="action-card">
+                <div class="icon purple">
+                    <i class="ri-price-tag-3-line"></i>
+                </div>
+
+                <h4>Add promo code</h4>
+                <p>Create a discount or sale</p>
+            </div>
+
+            <div class="action-card">
+                <div class="icon red">
+                    <i class="ri-arrow-go-back-line"></i>
+                </div>
+
+                <h4>View returns</h4>
+                <p>2 pending return requests</p>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM GRID -->
+        <div class="bottom-grid">
+
+            <!-- RECENT ORDERS -->
+            <div class="table-card">
+
+                <div class="card-header">
+                    <h3>Recent orders</h3>
+                    <a href="#">View all ↗</a>
+                </div>
+
+                <table>
+                    <tbody>
+
+                    <tr>
+                        <td>#WM-041</td>
+                        <td>Arjun Menon</td>
+                        <td><span class="status shipped">Shipped</span></td>
+                        <td>₹18,500</td>
+                    </tr>
+
+                    <tr>
+                        <td>#WM-040</td>
+                        <td>Priya Nair</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>₹6,200</td>
+                    </tr>
+
+                    <tr>
+                        <td>#WM-039</td>
+                        <td>Rahul Dev</td>
+                        <td><span class="status delivered">Delivered</span></td>
+                        <td>₹42,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>#WM-038</td>
+                        <td>Sneha Pillai</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>₹9,800</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <!-- STOCK ALERT -->
+            <div class="stock-card">
+
+                <div class="card-header">
+                    <h3>Low stock alerts</h3>
+                    <a href="#">Manage ↗</a>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <p>Seiko Presage Classic</p>
+                    </div>
+
+                    <div class="stock-right">
+                        <div class="progress red"></div>
+                        <span>2 left</span>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <p>Casio G-Shock GA-100</p>
+                    </div>
+
+                    <div class="stock-right">
+                        <div class="progress orange"></div>
+                        <span>4 left</span>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <p>Titan Edge Slim</p>
+                    </div>
+
+                    <div class="stock-right">
+                        <div class="progress green"></div>
+                        <span>6 left</span>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <p>Fastrack Reflex Beat</p>
+                    </div>
+
+                    <div class="stock-right">
+                        <div class="progress green long"></div>
+                        <span>7 left</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

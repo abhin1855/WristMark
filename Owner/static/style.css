@@ -1,0 +1,465 @@
+/* style.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f2ee;
+    color:#1e1e1e;
+}
+
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:260px;
+    background:#11132b;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:22px 0;
+}
+
+.logo{
+    padding:0 24px 20px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo h2{
+    font-weight:600;
+}
+
+.logo span{
+    color:#f0a53b;
+}
+
+.logo p{
+    font-size:12px;
+    color:#9b9db4;
+    margin-top:4px;
+}
+
+.menu-section{
+    margin-top:18px;
+}
+
+.menu-title{
+    padding:0 20px;
+    font-size:12px;
+    color:#6f7392;
+    margin-bottom:12px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 20px;
+    cursor:pointer;
+    color:#d3d6e8;
+    position:relative;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:rgba(255,255,255,0.04);
+}
+
+.sidebar ul li.active{
+    background:#2b2430;
+    color:#ffb347;
+    border-radius:0 12px 12px 0;
+    margin-right:10px;
+}
+
+.badge{
+    margin-left:auto;
+    background:#e4aa3d;
+    color:#111;
+    font-size:11px;
+    padding:2px 8px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.bottom-menu{
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:15px;
+}
+
+.profile-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:18px 20px 0;
+}
+
+.avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#49371d;
+    color:#f3b44f;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+}
+
+.profile-box h4{
+    font-size:14px;
+}
+
+.profile-box p{
+    font-size:12px;
+    color:#999;
+}
+
+.profile-box i{
+    margin-left:auto;
+    color:#8d90a8;
+}
+
+/* MAIN */
+
+.main-content{
+    flex:1;
+    padding:0;
+}
+
+/* TOPBAR */
+
+.topbar{
+    height:72px;
+    background:#fff;
+    border-bottom:1px solid #e8e8e8;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 28px;
+}
+
+.topbar h2{
+    display:inline;
+    font-size:28px;
+    font-weight:500;
+}
+
+.topbar span{
+    margin:0 12px;
+    color:#999;
+}
+
+.topbar p{
+    display:inline;
+    color:#777;
+}
+
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.notification-btn{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    background:#fff;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* STATS */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    padding:26px 26px 0;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    min-height:120px;
+    position:relative;
+    overflow:hidden;
+}
+
+.stat-card::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:4px;
+}
+
+.revenue::after{
+    background:#c98b2f;
+}
+
+.orders::after{
+    background:#1ba56b;
+}
+
+.watches::after{
+    background:#dd5c2e;
+}
+
+.buyers::after{
+    background:#4587f6;
+}
+
+.stat-card p{
+    color:#777;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    font-size:42px;
+    font-weight:500;
+}
+
+.stat-card span{
+    font-size:14px;
+    color:#20a15e;
+}
+
+.stat-card i{
+    font-size:48px;
+    color:#ececec;
+}
+
+/* SECTION */
+
+.section-title{
+    margin:28px 26px 14px;
+    color:#666;
+    font-size:18px;
+    font-weight:500;
+}
+
+/* ACTIONS */
+
+.action-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    padding:0 26px;
+}
+
+.action-card{
+    background:#fff;
+    border-radius:18px;
+    padding:18px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:14px;
+    font-size:20px;
+}
+
+.green{
+    background:#dff7ec;
+    color:#1fa46d;
+}
+
+.orange{
+    background:#fff0d8;
+    color:#d28a1d;
+}
+
+.purple{
+    background:#ece9ff;
+    color:#6f58ff;
+}
+
+.red{
+    background:#ffe7e7;
+    color:#dc4b4b;
+}
+
+.action-card h4{
+    margin-bottom:10px;
+    font-size:22px;
+    font-weight:500;
+}
+
+.action-card p{
+    color:#666;
+}
+
+/* BOTTOM */
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    padding:28px 26px;
+}
+
+.table-card,
+.stock-card{
+    background:#fff;
+    border-radius:18px;
+    padding:20px;
+}
+
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.card-header h3{
+    font-size:28px;
+    font-weight:500;
+}
+
+.card-header a{
+    color:#c48b34;
+    text-decoration:none;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table tr{
+    border-bottom:1px solid #eee;
+}
+
+table td{
+    padding:14px 0;
+    font-size:15px;
+}
+
+.status{
+    padding:5px 12px;
+    border-radius:30px;
+    font-size:12px;
+}
+
+.shipped{
+    background:#dff7ec;
+    color:#178f5d;
+}
+
+.pending{
+    background:#fff0d6;
+    color:#ba7b00;
+}
+
+.delivered{
+    background:#dfeeff;
+    color:#2768cc;
+}
+
+/* STOCK */
+
+.stock-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+}
+
+.stock-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.progress{
+    width:44px;
+    height:6px;
+    border-radius:10px;
+}
+
+.progress.red{
+    background:#db5c31;
+}
+
+.progress.orange{
+    background:#d99419;
+}
+
+.progress.green{
+    background:#73b32f;
+}
+
+.progress.long{
+    width:54px;
+}
+
+.stock-right span{
+    color:#999;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .stats-grid,
+    .action-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .bottom-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .stats-grid,
+    .action-grid{
+        grid-template-columns:1fr;
+    }
+
+    .topbar{
+        padding:0 16px;
+    }
+
+    .stats-grid,
+    .action-grid,
+    .bottom-grid{
+        padding-left:16px;
+        padding-right:16px;
+    }
+}
