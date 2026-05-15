@@ -15,7 +15,7 @@
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
@@ -46,14 +46,18 @@
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
                     <i class="ri-file-list-3-line"></i>
                     Orders
                     <span class="badge">4</span>
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
                     <i class="ri-group-line"></i>
                     Buyers
+                    </a>
                 </li>
             </ul>
         </div>

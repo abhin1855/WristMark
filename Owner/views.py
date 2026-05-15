@@ -9,3 +9,9 @@ def demo_page(request):
 
 def watch_page(request):
     return render(request,"Watch.html")
+
+def order_page(request):
+    return render(request,"Orders.html")
+
+def buyers_page(request):
+    return render(request,"Buyers.html")

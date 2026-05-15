@@ -1,0 +1,352 @@
+<!-- Orders.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                        <i class="ri-dashboard-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        Watches
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a class="menu-link" href="#">
+                        <i class="ri-file-list-3-line"></i>
+                        Orders
+                        <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="menu-section">
+
+            <p class="menu-title">STORE</p>
+
+            <ul>
+
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="bottom-menu">
+
+            <ul>
+
+                <li>
+                    <i class="ri-user-line"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+
+            </ul>
+
+            <div class="profile-box">
+
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <div class="topbar">
+
+            <div>
+                <h2>Orders</h2>
+                <span>/</span>
+                <p>Manage Orders</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <p>Wed, 13 May 2026</p>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ORDER STATS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card revenue">
+                <div>
+                    <p>TOTAL ORDERS</p>
+                    <h2>248</h2>
+                    <span>↑ 18 this week</span>
+                </div>
+
+                <i class="ri-shopping-cart-2-line"></i>
+            </div>
+
+            <div class="stat-card orders">
+                <div>
+                    <p>PENDING</p>
+                    <h2>14</h2>
+                    <span>Awaiting processing</span>
+                </div>
+
+                <i class="ri-time-line"></i>
+            </div>
+
+            <div class="stat-card watches">
+                <div>
+                    <p>SHIPPED</p>
+                    <h2>96</h2>
+                    <span>In transit</span>
+                </div>
+
+                <i class="ri-truck-line"></i>
+            </div>
+
+            <div class="stat-card buyers">
+                <div>
+                    <p>DELIVERED</p>
+                    <h2>138</h2>
+                    <span>Completed successfully</span>
+                </div>
+
+                <i class="ri-checkbox-circle-line"></i>
+            </div>
+
+        </div>
+
+        <!-- ORDER TABLE -->
+
+        <div class="orders-section">
+
+            <div class="orders-header">
+
+                <h3>Recent Orders</h3>
+
+                <button class="add-order-btn">
+                    <i class="ri-add-line"></i>
+                    Add Order
+                </button>
+
+            </div>
+
+            <div class="orders-table-wrapper">
+
+                <table class="orders-table">
+
+                    <thead>
+
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Watch</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td>#WM-1041</td>
+                        <td>Arjun Menon</td>
+                        <td>Rolex Submariner</td>
+                        <td>₹4,25,000</td>
+
+                        <td>
+                            <span class="order-status delivered">
+                                Delivered
+                            </span>
+                        </td>
+
+                        <td>13 May 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-edit-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>#WM-1042</td>
+                        <td>Priya Nair</td>
+                        <td>Casio G-Shock</td>
+                        <td>₹8,500</td>
+
+                        <td>
+                            <span class="order-status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>13 May 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-edit-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>#WM-1043</td>
+                        <td>Rahul Dev</td>
+                        <td>Titan Edge</td>
+                        <td>₹14,999</td>
+
+                        <td>
+                            <span class="order-status shipped">
+                                Shipped
+                            </span>
+                        </td>
+
+                        <td>12 May 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-edit-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+/* WATCH GRID */
+
+.watch-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+    padding:0 26px 30px;
+}
+
+/* WATCH CARD */
+
+.watch-card{
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.04);
+    transition:0.3s;
+    border:1px solid #ececec;
+}
+
+.watch-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* IMAGE SECTION */
+
+.watch-image{
+    height:180px;
+    background:#f8f8f8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+.watch-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transition:0.3s;
+}
+
+.watch-card:hover .watch-image img{
+    transform:scale(1.04);
+}
+
+/* CONTENT */
+
+.watch-content{
+    padding:16px;
+}
+
+.watch-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.watch-top h4{
+    font-size:18px;
+    font-weight:600;
+    color:#11132b;
+    line-height:1.4;
+}
+
+/* STOCK BADGES */
+
+.stock{
+    padding:5px 10px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.in-stock{
+    background:#dff7ec;
+    color:#158958;
+}
+
+.low-stock{
+    background:#fff1d8;
+    color:#c07b00;
+}
+
+.out-stock{
+    background:#ffe4e4;
+    color:#d64040;
+}
+
+/* BRAND */
+
+.watch-brand{
+    color:#777;
+    font-size:14px;
+    margin-bottom:18px;
+    line-height:1.5;
+}
+
+/* DETAILS */
+
+.watch-details{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.watch-details small{
+    color:#888;
+    display:block;
+    margin-bottom:5px;
+    font-size:12px;
+}
+
+.watch-details h5{
+    font-size:16px;
+    color:#11132b;
+    font-weight:600;
+}
+
+/* BUTTONS */
+
+.watch-actions{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+    flex:1;
+    height:42px;
+    border:none;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* EDIT BUTTON */
+
+.edit-btn{
+    background:#11132b;
+    color:#fff;
+}
+
+.edit-btn:hover{
+    background:#1c1f44;
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+    background:#ffe7e7;
+    color:#d64b4b;
+}
+
+.delete-btn:hover{
+    background:#ffd7d7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1600px){
+
+    .watch-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+
+@media(max-width:1300px){
+
+    .watch-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:900px){
+
+    .watch-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .watch-grid{
+        grid-template-columns:1fr;
+        padding:0 16px 30px;
+    }
+
+    .watch-image{
+        height:220px;
+    }
+}

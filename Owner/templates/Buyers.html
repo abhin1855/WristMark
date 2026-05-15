@@ -1,0 +1,421 @@
+<!-- Users.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/buyer.css' %}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                        <i class="ri-dashboard-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        Watches
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                        <i class="ri-file-list-3-line"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a class="menu-link" href="#">
+                        <i class="ri-group-line"></i>
+                        Buyers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="menu-section">
+
+            <p class="menu-title">STORE</p>
+
+            <ul>
+
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="bottom-menu">
+
+            <ul>
+
+                <li>
+                    <i class="ri-user-line"></i>
+                    Profile
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+
+            </ul>
+
+            <div class="profile-box">
+
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+                <h2>Registered Users</h2>
+                <span>/</span>
+                <p>Customer Management</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <p>Wed, 13 May 2026</p>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- USER STATS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card revenue">
+                <div>
+                    <p>TOTAL USERS</p>
+                    <h2>1,248</h2>
+                    <span>↑ 48 this month</span>
+                </div>
+
+                <i class="ri-group-line"></i>
+            </div>
+
+            <div class="stat-card orders">
+                <div>
+                    <p>ACTIVE USERS</p>
+                    <h2>986</h2>
+                    <span>Currently active</span>
+                </div>
+
+                <i class="ri-user-follow-line"></i>
+            </div>
+
+            <div class="stat-card watches">
+                <div>
+                    <p>NEW REGISTRATIONS</p>
+                    <h2>62</h2>
+                    <span>Last 7 days</span>
+                </div>
+
+                <i class="ri-user-add-line"></i>
+            </div>
+
+            <div class="stat-card buyers">
+                <div>
+                    <p>PREMIUM USERS</p>
+                    <h2>214</h2>
+                    <span>VIP customers</span>
+                </div>
+
+                <i class="ri-vip-crown-line"></i>
+            </div>
+
+        </div>
+
+        <!-- USERS SECTION -->
+
+        <div class="users-section">
+
+            <div class="users-header">
+
+                <h3>Registered Customers</h3>
+
+                <div class="users-actions">
+
+                    <div class="search-box">
+
+                        <i class="ri-search-line"></i>
+
+                        <input type="text" placeholder="Search users...">
+
+                    </div>
+
+                    <button class="add-user-btn">
+
+                        <i class="ri-user-add-line"></i>
+                        Add User
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- USERS TABLE -->
+
+            <div class="users-table-wrapper">
+
+                <table class="users-table">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Orders</th>
+                        <th>Status</th>
+                        <th>Joined</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+
+                        <td>
+
+                            <div class="user-info">
+
+                                <div class="user-avatar">AM</div>
+
+                                <div>
+                                    <h4>Arjun Menon</h4>
+                                    <p>Premium Buyer</p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>arjun@gmail.com</td>
+
+                        <td>+91 9876543210</td>
+
+                        <td>18</td>
+
+                        <td>
+                            <span class="user-status active-user">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>12 Jan 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <div class="user-info">
+
+                                <div class="user-avatar">PN</div>
+
+                                <div>
+                                    <h4>Priya Nair</h4>
+                                    <p>Customer</p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>priya@gmail.com</td>
+
+                        <td>+91 9123456780</td>
+
+                        <td>6</td>
+
+                        <td>
+                            <span class="user-status inactive-user">
+                                Inactive
+                            </span>
+                        </td>
+
+                        <td>03 Feb 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                            <div class="user-info">
+
+                                <div class="user-avatar">RD</div>
+
+                                <div>
+                                    <h4>Rahul Dev</h4>
+                                    <p>VIP Buyer</p>
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                        <td>rahul@gmail.com</td>
+
+                        <td>+91 9988776655</td>
+
+                        <td>24</td>
+
+                        <td>
+                            <span class="user-status active-user">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>20 Mar 2026</td>
+
+                        <td>
+
+                            <div class="table-actions">
+
+                                <button class="table-btn edit-table-btn">
+                                    <i class="ri-eye-line"></i>
+                                </button>
+
+                                <button class="table-btn delete-table-btn">
+                                    <i class="ri-delete-bin-line"></i>
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
