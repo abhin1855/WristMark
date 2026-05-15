@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/buyer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
 </head>
 <body>
 
@@ -27,8 +28,11 @@
     <aside class="sidebar">
 
         <div class="logo">
+          <a class="menu-link" href="{% url 'dashboard' %}">
             <h2>Wrist<span>Mark</span></h2>
-            <p>OWNER PANEL</p>
+            </a>
+          <p>OWNER PANEL</p>
+
         </div>
 
         <div class="menu-section">
@@ -105,8 +109,10 @@
             <ul>
 
                 <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
                     <i class="ri-user-line"></i>
                     Profile
+                    </a>
                 </li>
 
                 <li>
@@ -142,7 +148,7 @@
         <div class="topbar">
 
             <div>
-                <h2>Registered Users</h2>
+                <h2>Customers</h2>
                 <span>/</span>
                 <p>Customer Management</p>
             </div>
@@ -150,6 +156,10 @@
             <div class="topbar-right">
 
                 <p>Wed, 13 May 2026</p>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
 
                 <button class="notification-btn">
                     <i class="ri-notification-3-line"></i>
@@ -416,6 +426,8 @@
     </main>
 
 </div>
+
+<script src="{% static 'js/theme.js' %}"></script>
 
 </body>
 </html>

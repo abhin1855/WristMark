@@ -489,3 +489,18 @@ table td{
     width:100%;
 }
 
+/* THEME TOGGLE */
+
+.theme-toggle{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    border:1px solid #ddd;
+    cursor:pointer;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}

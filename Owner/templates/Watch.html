@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/watch.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
 </head>
 <body>
 
@@ -93,8 +94,10 @@
         <div class="bottom-menu">
             <ul>
                 <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
                     <i class="ri-user-line"></i>
                     Profile
+                    </a>
                 </li>
 
                 <li>
@@ -132,6 +135,10 @@
             <div class="topbar-right">
                 <p>Wed, 13 May 2026</p>
 
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
                 <button class="notification-btn">
                     <i class="ri-notification-3-line"></i>
                 </button>
@@ -142,6 +149,47 @@
 <!-- WATCH LIST SECTION -->
 
 <h3 class="section-title">WATCH COLLECTION</h3>
+
+        <!-- WATCH TOOLBAR -->
+
+<div class="watch-toolbar">
+
+    <!-- SEARCH -->
+
+    <div class="watch-search">
+
+        <i class="ri-search-line"></i>
+
+        <input type="text" placeholder="Search watches...">
+
+    </div>
+
+    <!-- RIGHT ACTIONS -->
+
+    <div class="watch-toolbar-actions">
+
+        <!-- FILTER -->
+
+        <button class="filter-btn">
+
+            <i class="ri-filter-3-line"></i>
+            Filters
+
+        </button>
+
+        <!-- ADD WATCH -->
+
+        <a href="{% url 'add_watch' %}" class="add-watch-btn">
+
+            <i class="ri-add-line"></i>
+            Add Watch
+
+        </a>
+
+
+    </div>
+
+</div>
 
 <div class="watch-grid">
 
@@ -416,6 +464,8 @@
     </main>
 
 </div>
+
+<script src="{% static 'js/theme.js' %}"></script>
 
 </body>
 </html>

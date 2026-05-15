@@ -1,0 +1,360 @@
+<!-- Profile.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Profile</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                        <i class="ri-dashboard-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        Watches
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                        <i class="ri-file-list-3-line"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                        <i class="ri-group-line"></i>
+                        Buyers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="menu-section">
+
+            <p class="menu-title">STORE</p>
+
+            <ul>
+
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="bottom-menu">
+
+            <ul>
+
+                <li class="active">
+                    <a class="menu-link" href="#">
+                        <i class="ri-user-line"></i>
+                        Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+
+            </ul>
+
+            <div class="profile-box">
+
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+                <h2>Profile</h2>
+                <span>/</span>
+                <p>Owner Account</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <p>Wed, 13 May 2026</p>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE SECTION -->
+
+        <div class="profile-page">
+
+            <!-- LEFT SIDE -->
+
+            <div class="profile-left">
+
+                <div class="profile-card">
+
+                    <div class="profile-cover"></div>
+
+                    <div class="profile-content">
+
+                        <div class="profile-avatar-large">
+                            WM
+                        </div>
+
+                        <h3>WristMark Admin</h3>
+
+                        <p class="profile-role">
+                            Store Owner & Administrator
+                        </p>
+
+                        <div class="profile-stats">
+
+                            <div>
+                                <h4>248</h4>
+                                <span>Orders</span>
+                            </div>
+
+                            <div>
+                                <h4>84</h4>
+                                <span>Products</span>
+                            </div>
+
+                            <div>
+                                <h4>1.2K</h4>
+                                <span>Customers</span>
+                            </div>
+
+                        </div>
+
+                        <button class="edit-profile-btn">
+
+                            <i class="ri-edit-line"></i>
+                            Edit Profile
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="profile-right">
+
+                <!-- PERSONAL INFO -->
+
+                <div class="info-card">
+
+                    <div class="info-header">
+
+                        <h3>Personal Information</h3>
+
+                        <button>
+                            <i class="ri-edit-line"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="info-grid">
+
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p>WristMark Admin</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Email</label>
+                            <p>admin@wristmark.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Phone</label>
+                            <p>+91 9876543210</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Location</label>
+                            <p>Kerala, India</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- STORE INFO -->
+
+                <div class="info-card">
+
+                    <div class="info-header">
+
+                        <h3>Store Information</h3>
+
+                        <button>
+                            <i class="ri-edit-line"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="info-grid">
+
+                        <div class="info-item">
+                            <label>Store Name</label>
+                            <p>WristMark Luxury Watches</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Business Type</label>
+                            <p>Luxury Watch Retail</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Founded</label>
+                            <p>2025</p>
+                        </div>
+
+                        <div class="info-item">
+                            <label>Website</label>
+                            <p>www.wristmark.com</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- SECURITY -->
+
+                <div class="info-card">
+
+                    <div class="info-header">
+
+                        <h3>Security Settings</h3>
+
+                    </div>
+
+                    <div class="security-actions">
+
+                        <button class="security-btn">
+
+                            <i class="ri-lock-password-line"></i>
+                            Change Password
+
+                        </button>
+
+                        <button class="security-btn">
+
+                            <i class="ri-shield-check-line"></i>
+                            Two-Factor Authentication
+
+                        </button>
+
+                        <button class="security-btn logout-btn">
+
+                            <i class="ri-logout-box-r-line"></i>
+                            Logout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+
+</body>
+</html>

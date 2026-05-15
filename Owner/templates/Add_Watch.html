@@ -1,0 +1,315 @@
+<!-- AddWatch.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Watch</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/watch.css' %}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <i class="ri-time-line"></i>
+                    Watches
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <i class="ri-menu-line"></i>
+                    Categories
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+    <div class="topbar-left">
+
+        <!-- BACK BUTTON -->
+
+        <a href="{% url 'watch_page' %}" class="back-btn">
+            <i class="ri-arrow-left-line"></i>
+        </a>
+
+        <div class="topbar-title">
+
+            <h2>Add Watch</h2>
+
+            <span>/</span>
+
+            <p>Create New Product</p>
+
+        </div>
+
+    </div>
+
+    <div class="topbar-right">
+
+        <button class="theme-toggle" id="themeToggle">
+            <i class="ri-moon-line"></i>
+        </button>
+
+        <button class="notification-btn">
+            <i class="ri-notification-3-line"></i>
+        </button>
+
+    </div>
+
+</div>
+
+        <!-- FORM SECTION -->
+
+        <div class="add-watch-container">
+
+            <form class="add-watch-form">
+
+                <div class="form-header">
+
+                    <h3>Add New Watch</h3>
+
+                    <p>
+                        Fill in the details below to add a new watch product.
+                    </p>
+
+                </div>
+
+                <!-- IMAGE UPLOAD -->
+
+                <div class="upload-section">
+
+                    <label>Watch Image</label>
+
+                    <div class="upload-box">
+
+                        <i class="ri-upload-cloud-2-line"></i>
+
+                        <h4>Upload Watch Image</h4>
+
+                        <p>Drag & drop or click to upload</p>
+
+                        <input type="file">
+
+                    </div>
+
+                </div>
+
+                <!-- FORM GRID -->
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Watch Name</label>
+
+                        <input type="text" placeholder="Enter watch name">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Brand</label>
+
+                        <input type="text" placeholder="Enter brand">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Price</label>
+
+                        <input type="number" placeholder="Enter price">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Stock Quantity</label>
+
+                        <input type="number" placeholder="Enter stock">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Category</label>
+
+                        <select>
+
+                            <option>Select category</option>
+                            <option>Luxury</option>
+                            <option>Sports</option>
+                            <option>Casual</option>
+                            <option>Digital</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Strap Type</label>
+
+                        <select>
+
+                            <option>Select strap type</option>
+                            <option>Leather</option>
+                            <option>Metal</option>
+                            <option>Rubber</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <!-- DESCRIPTION -->
+
+                <div class="input-group textarea-group">
+
+                    <label>Description</label>
+
+                    <textarea placeholder="Enter watch description"></textarea>
+
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="form-actions">
+
+                    <button type="button" class="cancel-btn">
+
+                        Cancel
+
+                    </button>
+
+                    <button type="submit" class="save-btn">
+
+                        <i class="ri-save-line"></i>
+                        Save Watch
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>

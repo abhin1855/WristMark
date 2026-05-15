@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/order.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
 </head>
 <body>
 
@@ -104,8 +105,10 @@
             <ul>
 
                 <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
                     <i class="ri-user-line"></i>
                     Profile
+                    </a>
                 </li>
 
                 <li>
@@ -147,6 +150,10 @@
             <div class="topbar-right">
 
                 <p>Wed, 13 May 2026</p>
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
 
                 <button class="notification-btn">
                     <i class="ri-notification-3-line"></i>
@@ -347,6 +354,8 @@
     </main>
 
 </div>
+
+<script src="{% static 'js/theme.js' %}"></script>
 
 </body>
 </html>

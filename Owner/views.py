@@ -15,3 +15,9 @@ def order_page(request):
 
 def buyers_page(request):
     return render(request,"Buyers.html")
+
+def profile_page(request):
+    return render(request,"Profile.html")
+
+def add_watch(request):
+    return render(request,"Add_Watch.html")

@@ -1,0 +1,168 @@
+/* DARK MODE */
+
+body.dark-mode{
+    background:#0f111a;
+    color:#fff;
+}
+
+/* MAIN CONTENT */
+
+body.dark-mode .main-content{
+    background:#0f111a;
+}
+
+/* CARDS */
+
+body.dark-mode .watch-card,
+body.dark-mode .stat-card,
+body.dark-mode .table-card,
+body.dark-mode .stock-card,
+body.dark-mode .orders-table-wrapper,
+body.dark-mode .users-table-wrapper,
+body.dark-mode .profile-card,
+body.dark-mode .info-card,
+body.dark-mode .watch-search,
+body.dark-mode .filter-btn,
+body.dark-mode .topbar{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+/* SIDEBAR */
+
+body.dark-mode .sidebar{
+    background:#0b0d15;
+}
+
+/* TEXT */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode td,
+body.dark-mode th,
+body.dark-mode label,
+body.dark-mode small{
+    color:#f1f1f1;
+}
+
+/* INPUTS */
+
+body.dark-mode input{
+    color:#fff;
+}
+
+body.dark-mode input::placeholder{
+    color:#aaa;
+}
+
+/* SEARCH BOX */
+
+body.dark-mode .watch-search input{
+    background:transparent;
+}
+
+/* TABLE */
+
+body.dark-mode .orders-table thead,
+body.dark-mode .users-table thead{
+    background:#151826;
+}
+
+body.dark-mode table tr{
+    border-color:#2a2e42;
+}
+
+/* BUTTONS */
+
+body.dark-mode .notification-btn,
+body.dark-mode .theme-toggle{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+/* HOVER */
+
+body.dark-mode .sidebar ul li:hover{
+    background:rgba(255,255,255,0.06);
+}
+
+/* ADD WATCH PAGE DARK MODE */
+
+body.dark-mode .add-watch-form{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* FORM TEXT */
+
+body.dark-mode .form-header h3,
+body.dark-mode .input-group label,
+body.dark-mode .upload-section label,
+body.dark-mode .upload-box h4{
+    color:#fff;
+}
+
+body.dark-mode .form-header p,
+body.dark-mode .upload-box p{
+    color:#aeb4d0;
+}
+
+/* INPUTS */
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group select,
+body.dark-mode .input-group textarea{
+    background:#111522;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+/* PLACEHOLDERS */
+
+body.dark-mode .input-group input::placeholder,
+body.dark-mode .input-group textarea::placeholder{
+    color:#8e95b8;
+}
+
+/* SELECT */
+
+body.dark-mode .input-group select{
+    color:#fff;
+}
+
+/* UPLOAD BOX */
+
+body.dark-mode .upload-box{
+    background:#111522;
+    border-color:#39415f;
+}
+
+body.dark-mode .upload-box i{
+    color:#fff;
+}
+
+/* BUTTONS */
+
+body.dark-mode .cancel-btn{
+    background:#2a3048;
+    color:#fff;
+}
+
+body.dark-mode .cancel-btn:hover{
+    background:#353d5a;
+}
+
+/* INPUT FOCUS */
+
+body.dark-mode .input-group input:focus,
+body.dark-mode .input-group select:focus,
+body.dark-mode .input-group textarea:focus{
+    border-color:#5b6cff;
+}

@@ -15,7 +15,9 @@
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+
 </head>
 <body>
 
@@ -125,6 +127,10 @@
             <div class="topbar-right">
                 <p>Wed, 13 May 2026</p>
 
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
                 <button class="notification-btn">
                     <i class="ri-notification-3-line"></i>
                 </button>
@@ -182,6 +188,8 @@
     </main>
 
 </div>
+
+<script src="{% static 'js/theme.js' %}"></script>
 
 </body>
 </html>
