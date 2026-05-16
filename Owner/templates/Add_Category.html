@@ -1,0 +1,269 @@
+<!-- AddCategory.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/category.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <!-- MENU -->
+
+        <div class="menu-section">
+
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                        <i class="ri-dashboard-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        Watches
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                        <i class="ri-file-list-3-line"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                        <i class="ri-group-line"></i>
+                        Buyers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- STORE -->
+
+        <div class="menu-section">
+
+            <p class="menu-title">STORE</p>
+
+            <ul>
+
+                <li class="active">
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                        <i class="ri-menu-line"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- BOTTOM -->
+
+        <div class="bottom-menu">
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                        <i class="ri-user-line"></i>
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <!-- BACK -->
+
+                <a href="{% url 'category_page' %}" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
+
+                <div class="topbar-title">
+
+                    <h2>Add Category</h2>
+
+                    <span>/</span>
+
+                    <p>Create Watch Category</p>
+
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PAGE CONTENT -->
+
+        <div class="add-category-container">
+
+            <div class="add-category-card">
+
+                <!-- HEADER -->
+
+                <div class="category-header">
+
+                    <h3>Create New Category</h3>
+
+                    <p>
+                        Add a new watch category for your store collection.
+                    </p>
+
+                </div>
+
+                <!-- FORM -->
+
+                <form class="category-form">
+
+                    <!-- IMAGE -->
+
+                    <div class="category-upload">
+
+                        <label>Category Icon / Image</label>
+
+                        <div class="upload-box">
+
+                            <i class="ri-image-add-line"></i>
+
+                            <h4>Upload Category Image</h4>
+
+                            <p>Click or drag image here</p>
+
+                            <input type="file">
+
+                        </div>
+
+                    </div>
+
+                    <!-- GRID -->
+
+                    <div class="category-grid-form">
+
+                        <div class="input-group">
+
+                            <label>Category Name</label>
+
+                            <input type="text" placeholder="Enter category name">
+
+                        </div>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="input-group textarea-group">
+
+                        <label>Description</label>
+
+                        <textarea placeholder="Enter category description"></textarea>
+
+                    </div>
+
+                    <!-- BUTTONS -->
+
+                    <div class="category-actions">
+
+                        <button type="button" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="save-btn">
+
+                            <i class="ri-save-line"></i>
+                            Save Category
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>

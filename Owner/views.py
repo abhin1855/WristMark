@@ -10,6 +10,9 @@ def demo_page(request):
 def watch_page(request):
     return render(request,"Watch.html")
 
+def add_watch(request):
+    return render(request,"Add_Watch.html")
+
 def order_page(request):
     return render(request,"Orders.html")
 
@@ -19,5 +22,9 @@ def buyers_page(request):
 def profile_page(request):
     return render(request,"Profile.html")
 
-def add_watch(request):
-    return render(request,"Add_Watch.html")
+def category_page(request):
+    return render(request,"Category.html")
+
+def add_category(request):
+    return render(request,"Add_Category.html")
+

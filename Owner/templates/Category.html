@@ -1,0 +1,506 @@
+<!-- Category.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/category.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <!-- MENU -->
+
+        <div class="menu-section">
+
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                        <i class="ri-dashboard-line"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        Watches
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                        <i class="ri-file-list-3-line"></i>
+                        Orders
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                        <i class="ri-group-line"></i>
+                        Buyers
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- STORE -->
+
+        <div class="menu-section">
+
+            <p class="menu-title">STORE</p>
+
+            <ul>
+
+                <li class="active">
+                    <a class="menu-link" href="#">
+                        <i class="ri-menu-line"></i>
+                        Categories
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                </li>
+
+                <li>
+                    <i class="ri-star-line"></i>
+                    Reviews
+                </li>
+
+                <li>
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- BOTTOM -->
+
+        <div class="bottom-menu">
+
+            <ul>
+
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                        <i class="ri-user-line"></i>
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <h2>Categories</h2>
+
+                <span>/</span>
+
+                <p>Watch Categories</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CATEGORY SECTION -->
+
+        <div class="category-container">
+
+            <!-- TOOLBAR -->
+
+            <div class="category-toolbar">
+
+                <!-- SEARCH -->
+
+                <div class="category-search">
+
+                    <i class="ri-search-line"></i>
+
+                    <input type="text" placeholder="Search category...">
+
+                </div>
+
+                <!-- ACTIONS -->
+
+                <div class="category-actions">
+                    <a class="add-category-btn" href="{% url 'add_category' %}">
+                        <i class="ri-add-line"></i>
+                        Add Category
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- CATEGORY GRID -->
+
+            <!-- CATEGORY TYPES -->
+
+<div class="category-types">
+
+    <!-- TYPE CARD -->
+
+    <div class="type-card">
+
+        <div class="type-icon luxury">
+            <i class="ri-vip-crown-2-line"></i>
+        </div>
+
+        <h4>Luxury</h4>
+
+        <span>24 Products</span>
+
+        <!-- HOVER INFO -->
+
+        <div class="type-hover">
+
+            <div class="hover-icon luxury">
+                <i class="ri-vip-crown-2-line"></i>
+            </div>
+
+            <h3>Luxury Watches</h3>
+
+            <p>
+                Premium designer and luxury collections.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TYPE CARD -->
+
+    <div class="type-card">
+
+        <div class="type-icon sports">
+            <i class="ri-timer-flash-line"></i>
+        </div>
+
+        <h4>Sports</h4>
+
+        <span>18 Products</span>
+
+        <div class="type-hover">
+
+            <div class="hover-icon sports">
+                <i class="ri-timer-flash-line"></i>
+            </div>
+
+            <h3>Sports Watches</h3>
+
+            <p>
+                Durable watches for fitness and adventure.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TYPE CARD -->
+
+    <div class="type-card">
+
+        <div class="type-icon casual">
+            <i class="ri-watch-line"></i>
+        </div>
+
+        <h4>Casual</h4>
+
+        <span>36 Products</span>
+
+        <div class="type-hover">
+
+            <div class="hover-icon casual">
+                <i class="ri-watch-line"></i>
+            </div>
+
+            <h3>Casual Watches</h3>
+
+            <p>
+                Stylish everyday wear watches.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- TYPE CARD -->
+
+    <div class="type-card">
+
+        <div class="type-icon digital">
+            <i class="ri-smartphone-line"></i>
+        </div>
+
+        <h4>Digital</h4>
+
+        <span>12 Products</span>
+
+        <div class="type-hover">
+
+            <div class="hover-icon digital">
+                <i class="ri-smartphone-line"></i>
+            </div>
+
+            <h3>Digital Watches</h3>
+
+            <p>
+                Smart and modern digital collections.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CATEGORY WATCHES -->
+
+<div class="category-watch-sections">
+
+    <!-- LUXURY -->
+
+    <div class="watch-type-section">
+
+        <div class="watch-type-header">
+
+            <div class="watch-type-title">
+
+                <div class="type-icon luxury">
+                    <i class="ri-vip-crown-2-line"></i>
+                </div>
+
+                <div>
+                    <h3>Luxury Watches</h3>
+                    <p>Premium luxury collection</p>
+                </div>
+
+            </div>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="mini-watch-grid">
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch1.png' %}" alt="">
+                <h4>Rolex Submariner</h4>
+                <span>₹4,25,000</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Omega Speedmaster</h4>
+                <span>₹3,20,000</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch3.png' %}" alt="">
+                <h4>Tag Heuer</h4>
+                <span>₹2,40,000</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch1.png' %}" alt="">
+                <h4>Cartier Elite</h4>
+                <span>₹5,80,000</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Hublot Prime</h4>
+                <span>₹6,10,000</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SPORTS -->
+
+    <div class="watch-type-section">
+
+        <div class="watch-type-header">
+
+            <div class="watch-type-title">
+
+                <div class="type-icon sports">
+                    <i class="ri-timer-flash-line"></i>
+                </div>
+
+                <div>
+                    <h3>Sports Watches</h3>
+                    <p>Built for adventure and fitness</p>
+                </div>
+
+            </div>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="mini-watch-grid">
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Casio G-Shock</h4>
+                <span>₹8,500</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch3.png' %}" alt="">
+                <h4>Garmin X5</h4>
+                <span>₹22,000</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch1.png' %}" alt="">
+                <h4>Suunto Core</h4>
+                <span>₹18,500</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Polar Extreme</h4>
+                <span>₹16,999</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch3.png' %}" alt="">
+                <h4>Timex Sport</h4>
+                <span>₹7,999</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CASUAL -->
+
+    <div class="watch-type-section">
+
+        <div class="watch-type-header">
+
+            <div class="watch-type-title">
+
+                <div class="type-icon casual">
+                    <i class="ri-watch-line"></i>
+                </div>
+
+                <div>
+                    <h3>Casual Watches</h3>
+                    <p>Everyday stylish wearables</p>
+                </div>
+
+            </div>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="mini-watch-grid">
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch1.png' %}" alt="">
+                <h4>Titan Neo</h4>
+                <span>₹5,500</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Fastrack Reflex</h4>
+                <span>₹3,999</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch3.png' %}" alt="">
+                <h4>Sonata Prime</h4>
+                <span>₹2,800</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch1.png' %}" alt="">
+                <h4>Timex Casual</h4>
+                <span>₹4,100</span>
+            </div>
+
+            <div class="mini-watch-card">
+                <img src="{% static 'images/watch2.png' %}" alt="">
+                <h4>Casio Classic</h4>
+                <span>₹3,600</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>
