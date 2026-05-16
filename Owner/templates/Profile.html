@@ -35,81 +35,81 @@
         </div>
 
         <div class="menu-section">
-
             <p class="menu-title">MAIN</p>
 
             <ul>
-
                 <li>
                     <a class="menu-link" href="{% url 'dashboard' %}">
-                        <i class="ri-dashboard-line"></i>
-                        Dashboard
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'watch_page' %}">
                         <i class="ri-time-line"></i>
-                        Watches
+                        <span>Watches</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'order_page' %}">
-                        <i class="ri-file-list-3-line"></i>
-                        Orders
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'buyer_page' %}">
-                        <i class="ri-group-line"></i>
-                        Buyers
+                    <i class="ri-group-line"></i>
+                    Buyers
                     </a>
                 </li>
-
             </ul>
-
         </div>
 
         <div class="menu-section">
-
             <p class="menu-title">STORE</p>
 
             <ul>
-
                 <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
                     <i class="ri-menu-line"></i>
                     Categories
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
                     <i class="ri-price-tag-3-line"></i>
                     Promotions
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
                     <i class="ri-star-line"></i>
                     Reviews
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
                     <i class="ri-arrow-go-back-line"></i>
                     Returns
+                    <span class="badge">2</span>
+                    </a>
                 </li>
-
             </ul>
-
         </div>
 
         <div class="bottom-menu">
-
             <ul>
-
                 <li class="active">
-                    <a class="menu-link" href="#">
-                        <i class="ri-user-line"></i>
-                        Profile
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
                     </a>
                 </li>
 
@@ -117,11 +117,9 @@
                     <i class="ri-settings-3-line"></i>
                     Settings
                 </li>
-
             </ul>
 
             <div class="profile-box">
-
                 <div class="avatar">WM</div>
 
                 <div>
@@ -130,13 +128,10 @@
                 </div>
 
                 <i class="ri-logout-box-r-line"></i>
-
             </div>
-
         </div>
 
     </aside>
-
     <!-- MAIN CONTENT -->
 
     <main class="main-content">

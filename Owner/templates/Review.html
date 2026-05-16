@@ -1,0 +1,550 @@
+<!-- Reviews.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reviews</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/review.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <h2>Reviews</h2>
+
+                <span>/</span>
+
+                <p>Customer Feedback</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="reviews-container">
+
+            <!-- TOOLBAR -->
+
+            <div class="reviews-toolbar">
+
+                <!-- SEARCH -->
+
+                <div class="reviews-search">
+
+                    <i class="ri-search-line"></i>
+
+                    <input type="text" placeholder="Search reviews...">
+
+                </div>
+
+                <!-- FILTERS -->
+
+                <div class="review-filters">
+
+                    <button class="active-filter">
+                        All
+                    </button>
+
+                    <button>
+                        5 Star
+                    </button>
+
+                    <button>
+                        4 Star
+                    </button>
+
+                    <button>
+                        Low Rated
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- REVIEW STATS -->
+
+            <div class="review-stats">
+
+                <div class="review-stat-card">
+
+                    <i class="ri-star-fill"></i>
+
+                    <div>
+
+                        <h3>4.8</h3>
+
+                        <p>Average Rating</p>
+
+                    </div>
+
+                </div>
+
+                <div class="review-stat-card">
+
+                    <i class="ri-chat-3-line"></i>
+
+                    <div>
+
+                        <h3>1,284</h3>
+
+                        <p>Total Reviews</p>
+
+                    </div>
+
+                </div>
+
+                <div class="review-stat-card">
+
+                    <i class="ri-emotion-happy-line"></i>
+
+                    <div>
+
+                        <h3>92%</h3>
+
+                        <p>Positive Reviews</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- REVIEW LIST -->
+
+            <div class="review-list">
+
+                <!-- REVIEW CARD -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                AM
+                            </div>
+
+                            <div>
+
+                                <h4>Arjun Menon</h4>
+
+                                <span>Purchased Rolex Submariner</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-rating">
+
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Excellent craftsmanship and premium feel.
+                        Delivery was fast and packaging was top-notch.
+
+                    </p>
+
+                    <div class="review-footer">
+
+                        <span>13 May 2026</span>
+
+                        <button onclick="openReviewModal()">
+                            Reply
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- REVIEW CARD -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                PN
+                            </div>
+
+                            <div>
+
+                                <h4>Priya Nair</h4>
+
+                                <span>Purchased Casio G-Shock</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-rating">
+
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Very durable and comfortable watch.
+                        Perfect for workouts and casual wear.
+
+                    </p>
+
+                    <div class="review-footer">
+
+                        <span>11 May 2026</span>
+
+                        <button>
+                            Reply
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- REVIEW CARD -->
+
+                <div class="review-card">
+
+                    <div class="review-header">
+
+                        <div class="review-user">
+
+                            <div class="review-avatar">
+                                SK
+                            </div>
+
+                            <div>
+
+                                <h4>Sneha Kumar</h4>
+
+                                <span>Purchased Titan Neo</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-rating">
+
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+
+                        Nice watch overall but delivery took longer than expected.
+
+                    </p>
+
+                    <div class="review-footer">
+
+                        <span>08 May 2026</span>
+
+                        <button>
+                            Reply
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- REVIEW REPLY MODAL -->
+
+<div class="review-modal" id="reviewModal">
+
+    <!-- GLASS CARD -->
+
+    <div class="review-modal-card">
+
+        <!-- CLOSE BUTTON -->
+
+        <button class="close-review-modal"
+                onclick="closeReviewModal()">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- HEADER -->
+
+        <div class="review-modal-header">
+
+            <div class="review-modal-user">
+
+                <div class="review-modal-avatar">
+                    AM
+                </div>
+
+                <div>
+
+                    <h3>Reply to Arjun Menon</h3>
+
+                    <p>Rolex Submariner Review</p>
+
+                </div>
+
+            </div>
+
+            <div class="review-modal-rating">
+
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+
+            </div>
+
+        </div>
+
+        <!-- ORIGINAL REVIEW -->
+
+        <div class="original-review">
+
+            <small>Customer Review</small>
+
+            <p>
+                Excellent craftsmanship and premium feel.
+                Delivery was fast and packaging was top-notch.
+            </p>
+
+        </div>
+
+        <!-- REPLY BOX -->
+
+        <div class="reply-box">
+
+            <label>Your Reply</label>
+
+            <textarea placeholder="Write your reply here..."></textarea>
+
+        </div>
+
+        <!-- ACTIONS -->
+
+        <div class="review-modal-actions">
+
+            <button class="cancel-review-btn"
+                    onclick="closeReviewModal()">
+
+                Cancel
+
+            </button>
+
+            <button class="send-review-btn">
+
+                <i class="ri-send-plane-fill"></i>
+
+                Send Reply
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+<script>
+
+function openReviewModal(){
+
+    document
+    .getElementById("reviewModal")
+    .classList.add("active");
+
+}
+
+function closeReviewModal(){
+
+    document
+    .getElementById("reviewModal")
+    .classList.remove("active");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -28,57 +28,49 @@
     <aside class="sidebar">
 
         <div class="logo">
-          <a class="menu-link" href="{% url 'dashboard' %}">
             <h2>Wrist<span>Mark</span></h2>
-            </a>
-          <p>OWNER PANEL</p>
-
+            <p>OWNER PANEL</p>
         </div>
 
         <div class="menu-section">
-
             <p class="menu-title">MAIN</p>
 
             <ul>
-
                 <li>
                     <a class="menu-link" href="{% url 'dashboard' %}">
-                        <i class="ri-dashboard-line"></i>
-                        Dashboard
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'watch_page' %}">
                         <i class="ri-time-line"></i>
-                        Watches
+                        <span>Watches</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'order_page' %}">
-                        <i class="ri-file-list-3-line"></i>
-                        Orders
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
                     </a>
                 </li>
 
                 <li class="active">
-                    <a class="menu-link" href="#">
-                        <i class="ri-group-line"></i>
-                        Buyers
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
                     </a>
                 </li>
-
             </ul>
-
         </div>
 
         <div class="menu-section">
-
             <p class="menu-title">STORE</p>
 
             <ul>
-
                 <li>
                     <a class="menu-link" href="{% url 'category_page' %}">
                     <i class="ri-menu-line"></i>
@@ -87,29 +79,31 @@
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
                     <i class="ri-price-tag-3-line"></i>
                     Promotions
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
                     <i class="ri-star-line"></i>
                     Reviews
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
                     <i class="ri-arrow-go-back-line"></i>
                     Returns
                     <span class="badge">2</span>
+                    </a>
                 </li>
-
             </ul>
-
         </div>
 
         <div class="bottom-menu">
-
             <ul>
-
                 <li>
                     <a class="menu-link" href="{% url 'profile_page' %}">
                     <i class="ri-user-line"></i>
@@ -121,11 +115,9 @@
                     <i class="ri-settings-3-line"></i>
                     Settings
                 </li>
-
             </ul>
 
             <div class="profile-box">
-
                 <div class="avatar">WM</div>
 
                 <div>
@@ -134,9 +126,7 @@
                 </div>
 
                 <i class="ri-logout-box-r-line"></i>
-
             </div>
-
         </div>
 
     </aside>
@@ -231,16 +221,10 @@
 
                         <i class="ri-search-line"></i>
 
-                        <input type="text" placeholder="Search users...">
+                        <input type="text" placeholder="Search customers...">
 
                     </div>
 
-                    <button class="add-user-btn">
-
-                        <i class="ri-user-add-line"></i>
-                        Add User
-
-                    </button>
 
                 </div>
 
@@ -256,7 +240,7 @@
 
                     <tr>
 
-                        <th>User</th>
+                        <th>UserName</th>
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Orders</th>

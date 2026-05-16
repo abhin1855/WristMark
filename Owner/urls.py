@@ -15,4 +15,8 @@ urlpatterns = [
 
     path('category/',views.category_page,name="category_page"),
     path('add_category/',views.add_category,name="add_category"),
+
+    path('promotion/',views.promotion_page,name="promotion_page"),
+    path('return/',views.returns_page,name="return_page"),
+    path('review/',views.review_page,name="review_page"),
 ]

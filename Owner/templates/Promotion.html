@@ -1,0 +1,380 @@
+<!-- Promotions.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Promotions</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/promotions.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <h2>Promotions</h2>
+
+                <span>/</span>
+
+                <p>Discount Campaigns</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PROMOTION CONTENT -->
+
+        <div class="promotion-container">
+
+            <!-- TOOLBAR -->
+
+            <div class="promotion-toolbar">
+
+                <!-- SEARCH -->
+
+                <div class="promotion-search">
+
+                    <i class="ri-search-line"></i>
+
+                    <input type="text" placeholder="Search promotions...">
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <a href="#" class="add-promotion-btn">
+
+                    <i class="ri-add-line"></i>
+                    Add Promotion
+
+                </a>
+
+            </div>
+
+            <!-- PROMOTION GRID -->
+
+            <div class="promotion-grid">
+
+                <!-- CARD -->
+
+                <div class="promotion-card">
+
+                    <div class="promotion-top">
+
+                        <span class="promotion-badge active-badge">
+                            Active
+                        </span>
+
+                        <button>
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="promotion-icon luxury-gradient">
+
+                        <i class="ri-vip-crown-2-line"></i>
+
+                    </div>
+
+                    <h3>Luxury Week Sale</h3>
+
+                    <p>
+                        Get up to 25% off on selected luxury watches.
+                    </p>
+
+                    <div class="promotion-details">
+
+                        <div>
+                            <small>Discount</small>
+                            <h4>25%</h4>
+                        </div>
+
+                        <div>
+                            <small>Products</small>
+                            <h4>18</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="promotion-footer">
+
+                        <span>Ends: 30 May 2026</span>
+
+                        <a href="#">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="promotion-card">
+
+                    <div class="promotion-top">
+
+                        <span class="promotion-badge upcoming-badge">
+                            Upcoming
+                        </span>
+
+                        <button>
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="promotion-icon sports-gradient">
+
+                        <i class="ri-timer-flash-line"></i>
+
+                    </div>
+
+                    <h3>Sports Collection</h3>
+
+                    <p>
+                        Flat discounts on sports and fitness watches.
+                    </p>
+
+                    <div class="promotion-details">
+
+                        <div>
+                            <small>Discount</small>
+                            <h4>15%</h4>
+                        </div>
+
+                        <div>
+                            <small>Products</small>
+                            <h4>12</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="promotion-footer">
+
+                        <span>Starts: 02 June 2026</span>
+
+                        <a href="#">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="promotion-card">
+
+                    <div class="promotion-top">
+
+                        <span class="promotion-badge expired-badge">
+                            Expired
+                        </span>
+
+                        <button>
+                            <i class="ri-more-2-fill"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="promotion-icon casual-gradient">
+
+                        <i class="ri-watch-line"></i>
+
+                    </div>
+
+                    <h3>Casual Deals</h3>
+
+                    <p>
+                        Weekend offers on casual everyday watches.
+                    </p>
+
+                    <div class="promotion-details">
+
+                        <div>
+                            <small>Discount</small>
+                            <h4>10%</h4>
+                        </div>
+
+                        <div>
+                            <small>Products</small>
+                            <h4>26</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="promotion-footer">
+
+                        <span>Expired: 12 May 2026</span>
+
+                        <a href="#">
+                            View
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>

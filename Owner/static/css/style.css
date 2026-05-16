@@ -275,61 +275,139 @@ body{
     font-weight:500;
 }
 
-/* ACTIONS */
+/* =================================
+   QUICK ACTIONS
+================================= */
 
 .action-grid{
+
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:16px;
+
+    gap:18px;
+
     padding:0 26px;
+
+    margin-bottom:34px;
 }
+
+/* CARD */
 
 .action-card{
+
     background:#fff;
-    border-radius:18px;
+
+    border-radius:20px;
+
     padding:18px;
+
+    border:1px solid #ececec;
+
+    text-decoration:none;
+
+    transition:0.3s ease;
+
+    position:relative;
+
+    overflow:hidden;
 }
 
+.action-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+/* TOP */
+
+.action-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+/* ICON */
+
 .icon{
-    width:40px;
-    height:40px;
-    border-radius:12px;
+
+    width:54px;
+    height:54px;
+
+    border-radius:16px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    margin-bottom:14px;
-    font-size:20px;
+
+    font-size:24px;
 }
 
-.green{
-    background:#dff7ec;
-    color:#1fa46d;
-}
+/* COLORS */
 
-.orange{
-    background:#fff0d8;
-    color:#d28a1d;
-}
-
-.purple{
-    background:#ece9ff;
-    color:#6f58ff;
+.blue{
+    background:#e8edff;
+    color:#4353ff;
 }
 
 .red{
     background:#ffe7e7;
-    color:#dc4b4b;
+    color:#d64040;
 }
+
+.purple{
+    background:#efe8ff;
+    color:#7b4dff;
+}
+
+.orange{
+    background:#fff1d8;
+    color:#c07b00;
+}
+
+/* ARROW */
+
+.action-arrow{
+
+    font-size:22px;
+
+    color:#999;
+
+    transition:0.3s ease;
+}
+
+.action-card:hover .action-arrow{
+
+    transform:translate(4px,-4px);
+
+    color:#11132b;
+}
+
+/* TITLE */
 
 .action-card h4{
-    margin-bottom:10px;
-    font-size:22px;
-    font-weight:500;
+
+    font-size:18px;
+
+    color:#11132b;
+
+    margin-bottom:12px;
 }
 
+/* TEXT */
+
 .action-card p{
-    color:#666;
+
+    color:#777;
+
+    line-height:1.5;
+
+    font-size:13px;
 }
+
 
 /* BOTTOM */
 
@@ -453,6 +531,13 @@ table td{
     }
 
     .bottom-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:700px){
+
+    .action-grid{
         grid-template-columns:1fr;
     }
 }

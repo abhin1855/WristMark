@@ -76,19 +76,25 @@
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
                     <i class="ri-price-tag-3-line"></i>
                     Promotions
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
                     <i class="ri-star-line"></i>
                     Reviews
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
                     <i class="ri-arrow-go-back-line"></i>
                     Returns
                     <span class="badge">2</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -193,48 +199,104 @@
 
         </div>
 
-        <!-- QUICK ACTIONS -->
-        <h3 class="section-title">QUICK ACTIONS</h3>
 
-        <div class="action-grid">
+<!-- QUICK ACTIONS -->
 
-            <div class="action-card">
-                <div class="icon green">
-                    <i class="ri-add-circle-line"></i>
-                </div>
+<h3 class="section-title">QUICK ACTIONS</h3>
 
-                <h4>Add watch</h4>
-                <p>List a new watch in the catalog</p>
+<div class="action-grid">
+
+    <!-- ADD WATCH -->
+
+    <a href="{% url 'add_watch' %}" class="action-card">
+
+        <div class="action-top">
+
+            <div class="icon blue">
+                <i class="ri-add-circle-line"></i>
             </div>
 
-            <div class="action-card">
-                <div class="icon orange">
-                    <i class="ri-file-list-3-line"></i>
-                </div>
-
-                <h4>Manage orders</h4>
-                <p>Update status, handle issues</p>
-            </div>
-
-            <div class="action-card">
-                <div class="icon purple">
-                    <i class="ri-price-tag-3-line"></i>
-                </div>
-
-                <h4>Add promo code</h4>
-                <p>Create a discount or sale</p>
-            </div>
-
-            <div class="action-card">
-                <div class="icon red">
-                    <i class="ri-arrow-go-back-line"></i>
-                </div>
-
-                <h4>View returns</h4>
-                <p>2 pending return requests</p>
-            </div>
+            <i class="ri-arrow-right-up-line action-arrow"></i>
 
         </div>
+
+        <h4>Add Watch</h4>
+
+        <p>
+            List a new luxury watch in the catalog
+        </p>
+
+    </a>
+
+    <!-- ADD PROMOTION -->
+
+    <a href="{% url 'promotion_page' %}" class="action-card">
+
+        <div class="action-top">
+
+            <div class="icon orange">
+                <i class="ri-price-tag-3-line"></i>
+            </div>
+
+            <i class="ri-arrow-right-up-line action-arrow"></i>
+
+        </div>
+
+        <h4>Add Promotion</h4>
+
+        <p>
+            Create offers, discounts and campaigns
+        </p>
+
+    </a>
+
+    <!-- VIEW RETURNS -->
+
+    <a href="{% url 'return_page' %}" class="action-card">
+
+        <div class="action-top">
+
+            <div class="icon red">
+                <i class="ri-arrow-go-back-line"></i>
+            </div>
+
+            <i class="ri-arrow-right-up-line action-arrow"></i>
+
+        </div>
+
+        <h4>View Returns</h4>
+
+        <p>
+            Manage pending return requests
+        </p>
+
+    </a>
+
+    <!-- VIEW REPLIES -->
+
+    <a href="{% url 'review_page' %}" class="action-card">
+
+        <div class="action-top">
+
+            <div class="icon purple">
+                <i class="ri-chat-3-line"></i>
+            </div>
+
+            <i class="ri-arrow-right-up-line action-arrow"></i>
+
+        </div>
+
+        <h4>View Replies</h4>
+
+        <p>
+            Respond to customer reviews and feedback
+        </p>
+
+    </a>
+
+
+
+</div>
 
         <!-- BOTTOM GRID -->
         <div class="bottom-grid">

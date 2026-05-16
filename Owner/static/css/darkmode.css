@@ -166,3 +166,911 @@ body.dark-mode .input-group select:focus,
 body.dark-mode .input-group textarea:focus{
     border-color:#5b6cff;
 }
+
+/* =================================
+   CATEGORY PAGE DARK MODE
+================================= */
+
+/* CATEGORY TYPE CARDS */
+
+body.dark-mode .type-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* NORMAL TEXT */
+
+body.dark-mode .type-card h4,
+body.dark-mode .watch-type-header h3,
+body.dark-mode .mini-watch-card h4,
+body.dark-mode .mini-watch-card span{
+    color:#fff;
+}
+
+body.dark-mode .type-card span,
+body.dark-mode .watch-type-title p{
+    color:#aeb4d0;
+}
+
+/* HOVER CARD */
+
+body.dark-mode .type-hover{
+    background:#232741;
+}
+
+/* CATEGORY SEARCH */
+
+body.dark-mode .category-search{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .category-search input{
+    color:#fff;
+}
+
+body.dark-mode .category-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .category-search i{
+    color:#aeb4d0;
+}
+
+/* ADD CATEGORY BUTTON */
+
+body.dark-mode .add-category-btn{
+    background:#5b6cff;
+}
+
+body.dark-mode .add-category-btn:hover{
+    background:#7280ff;
+}
+
+/* MINI WATCH CARDS */
+
+body.dark-mode .mini-watch-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* IMAGE AREA */
+
+body.dark-mode .mini-watch-card img{
+    background:#111522;
+    border-radius:16px;
+    padding:12px;
+}
+
+/* VIEW ALL */
+
+body.dark-mode .watch-type-header a{
+    color:#7280ff;
+}
+
+/* SECTION DIVIDER */
+
+body.dark-mode .watch-type-section{
+    border-color:#2b3047;
+}
+
+/* CATEGORY ICON BACKGROUNDS */
+
+body.dark-mode .luxury{
+    background:#3d3213;
+    color:#f5c84c;
+}
+
+body.dark-mode .sports{
+    background:#17382b;
+    color:#4edba4;
+}
+
+body.dark-mode .casual{
+    background:#22294a;
+    color:#93a0ff;
+}
+
+body.dark-mode .digital{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+/* =================================
+   PROMOTIONS PAGE DARK MODE
+================================= */
+
+/* SEARCH */
+
+body.dark-mode .promotion-search{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .promotion-search input{
+    color:#fff;
+}
+
+body.dark-mode .promotion-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .promotion-search i{
+    color:#aeb4d0;
+}
+
+/* ADD BUTTON */
+
+body.dark-mode .add-promotion-btn{
+    background:#5b6cff;
+}
+
+body.dark-mode .add-promotion-btn:hover{
+    background:#7280ff;
+}
+
+/* PROMOTION CARD */
+
+body.dark-mode .promotion-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* CARD HOVER */
+
+body.dark-mode .promotion-card:hover{
+    background:#20253a;
+}
+
+/* TITLE */
+
+body.dark-mode .promotion-card h3{
+    color:#fff;
+}
+
+/* DESCRIPTION */
+
+body.dark-mode .promotion-card p,
+body.dark-mode .promotion-footer span,
+body.dark-mode .promotion-details small{
+    color:#aeb4d0;
+}
+
+/* DETAILS */
+
+body.dark-mode .promotion-details h4{
+    color:#fff;
+}
+
+/* VIEW LINK */
+
+body.dark-mode .promotion-footer a{
+    color:#7280ff;
+}
+
+/* TOP BUTTON */
+
+body.dark-mode .promotion-top button{
+    background:#111522;
+    color:#fff;
+}
+
+body.dark-mode .promotion-top button:hover{
+    background:#2b3047;
+}
+
+/* BADGES */
+
+body.dark-mode .active-badge{
+    background:#17382b;
+    color:#4edba4;
+}
+
+body.dark-mode .upcoming-badge{
+    background:#22294a;
+    color:#93a0ff;
+}
+
+body.dark-mode .expired-badge{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+/* ICON GRADIENTS */
+
+body.dark-mode .luxury-gradient{
+    background:linear-gradient(135deg,#8f6a00,#d4a61f);
+}
+
+body.dark-mode .sports-gradient{
+    background:linear-gradient(135deg,#1d7b59,#39c58f);
+}
+
+body.dark-mode .casual-gradient{
+    background:linear-gradient(135deg,#4353ff,#7280ff);
+}
+
+/* =================================
+   REVIEWS PAGE DARK MODE
+================================= */
+
+/* SEARCH */
+
+body.dark-mode .reviews-search{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .reviews-search input{
+    color:#fff;
+}
+
+body.dark-mode .reviews-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .reviews-search i{
+    color:#aeb4d0;
+}
+
+/* FILTER BUTTONS */
+
+body.dark-mode .review-filters button{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+body.dark-mode .review-filters button:hover{
+    background:#232741;
+}
+
+body.dark-mode .active-filter{
+    background:#5b6cff !important;
+    border-color:#5b6cff !important;
+    color:#fff;
+}
+
+/* STATS */
+
+body.dark-mode .review-stat-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .review-stat-card h3{
+    color:#fff;
+}
+
+body.dark-mode .review-stat-card p{
+    color:#aeb4d0;
+}
+
+/* ICON */
+
+body.dark-mode .review-stat-card i{
+    background:#3d3213;
+    color:#f5c84c;
+}
+
+/* REVIEW CARD */
+
+body.dark-mode .review-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* USER */
+
+body.dark-mode .review-avatar{
+    background:#5b6cff;
+    color:#fff;
+}
+
+body.dark-mode .review-user h4{
+    color:#fff;
+}
+
+body.dark-mode .review-user span{
+    color:#aeb4d0;
+}
+
+/* TEXT */
+
+body.dark-mode .review-text{
+    color:#d5d8ea;
+}
+
+/* FOOTER */
+
+body.dark-mode .review-footer span{
+    color:#8e95b8;
+}
+
+body.dark-mode .review-footer button{
+    background:#5b6cff;
+}
+
+body.dark-mode .review-footer button:hover{
+    background:#7280ff;
+}
+
+/* REVIEW CARD HOVER */
+
+body.dark-mode .review-card:hover{
+    background:#20253a;
+}
+
+/* RATING */
+
+body.dark-mode .review-rating i{
+    color:#ffc83d;
+}
+
+/* =================================
+   RETURNS PAGE DARK MODE
+================================= */
+
+/* SEARCH */
+
+body.dark-mode .returns-search{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .returns-search input{
+    color:#fff;
+}
+
+body.dark-mode .returns-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .returns-search i{
+    color:#aeb4d0;
+}
+
+/* FILTER BUTTONS */
+
+body.dark-mode .return-filters button{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+body.dark-mode .return-filters button:hover{
+    background:#232741;
+}
+
+body.dark-mode .active-filter{
+    background:#5b6cff !important;
+    border-color:#5b6cff !important;
+    color:#fff;
+}
+
+/* STAT CARDS */
+
+body.dark-mode .return-stat-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .return-stat-card h3{
+    color:#fff;
+}
+
+body.dark-mode .return-stat-card p{
+    color:#aeb4d0;
+}
+
+/* STAT ICON */
+
+body.dark-mode .return-stat-card i{
+    background:#3d3213;
+    color:#f5c84c;
+}
+
+/* RETURN CARD */
+
+body.dark-mode .return-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .return-card:hover{
+    background:#20253a;
+}
+
+/* USER */
+
+body.dark-mode .return-avatar{
+    background:#5b6cff;
+    color:#fff;
+}
+
+body.dark-mode .return-user h4{
+    color:#fff;
+}
+
+body.dark-mode .return-user span{
+    color:#aeb4d0;
+}
+
+/* STATUS BADGES */
+
+body.dark-mode .pending-status{
+    background:#3d3213;
+    color:#f5c84c;
+}
+
+body.dark-mode .approved-status{
+    background:#17382b;
+    color:#4edba4;
+}
+
+body.dark-mode .rejected-status{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+/* WATCH SECTION */
+
+body.dark-mode .return-watch img{
+    background:#111522;
+}
+
+body.dark-mode .return-watch h3{
+    color:#fff;
+}
+
+body.dark-mode .return-watch p{
+    color:#c7cbe2;
+}
+
+/* FOOTER */
+
+body.dark-mode .return-footer span{
+    color:#8e95b8;
+}
+
+/* BUTTONS */
+
+body.dark-mode .approve-btn{
+    background:#158958;
+    color:#fff;
+}
+
+body.dark-mode .approve-btn:hover{
+    background:#1ca86d;
+}
+
+body.dark-mode .reject-btn{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+body.dark-mode .reject-btn:hover{
+    background:#572b2b;
+}
+
+body.dark-mode .view-btn{
+    background:#5b6cff;
+    color:#fff;
+}
+
+body.dark-mode .view-btn:hover{
+    background:#7280ff;
+}
+
+/* =================================
+   RETURN MODAL DARK MODE
+================================= */
+
+/* OVERLAY */
+
+body.dark-mode .return-modal{
+    background:rgba(0,0,0,0.6);
+}
+
+/* GLASS CARD */
+
+body.dark-mode .return-modal-card{
+
+    background:rgba(20,24,38,0.78);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+}
+
+/* CLOSE BUTTON */
+
+body.dark-mode .close-modal{
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+}
+
+body.dark-mode .close-modal:hover{
+    background:rgba(255,255,255,0.14);
+}
+
+/* USER */
+
+body.dark-mode .modal-avatar{
+    background:#5b6cff;
+    color:#fff;
+}
+
+body.dark-mode .modal-user h3{
+    color:#fff;
+}
+
+body.dark-mode .modal-user p{
+    color:#aeb4d0;
+}
+
+/* WATCH */
+
+body.dark-mode .modal-watch img{
+    background:#111522;
+}
+
+body.dark-mode .modal-watch h2{
+    color:#fff;
+}
+
+body.dark-mode .modal-watch p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .modal-watch h4{
+    color:#fff;
+}
+
+/* DETAILS */
+
+body.dark-mode .detail-box,
+body.dark-mode .detail-item{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* TEXT */
+
+body.dark-mode .detail-box small,
+body.dark-mode .detail-item small{
+    color:#8e95b8;
+}
+
+body.dark-mode .detail-box p,
+body.dark-mode .detail-item h4{
+    color:#fff;
+}
+
+/* BUTTONS */
+
+body.dark-mode .approve-btn{
+    background:#158958;
+    color:#fff;
+}
+
+body.dark-mode .approve-btn:hover{
+    background:#1ca86d;
+}
+
+body.dark-mode .reject-btn{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+body.dark-mode .reject-btn:hover{
+    background:#572b2b;
+}
+
+/* STATUS */
+
+body.dark-mode .pending-status{
+    background:#3d3213;
+    color:#f5c84c;
+}
+
+body.dark-mode .approved-status{
+    background:#17382b;
+    color:#4edba4;
+}
+
+body.dark-mode .rejected-status{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+/* =================================
+   BUYERS PAGE DARK MODE FIX
+================================= */
+
+/* STATUS BADGES */
+
+body.dark-mode .user-status{
+    font-weight:600;
+    border:none;
+}
+
+/* ACTIVE STATUS */
+
+body.dark-mode .active-user{
+    background:#17382b;
+    color:#4edba4;
+}
+
+/* INACTIVE STATUS */
+
+body.dark-mode .inactive-user{
+    background:#402222;
+    color:#ff8a8a;
+}
+
+/* TABLE ACTIONS */
+
+body.dark-mode .table-actions{
+    display:flex;
+    gap:10px;
+}
+
+/* COMMON BUTTON */
+
+body.dark-mode .table-btn{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+/* VIEW BUTTON */
+
+body.dark-mode .edit-table-btn{
+    background:#22294a;
+    color:#93a0ff;
+}
+
+body.dark-mode .edit-table-btn:hover{
+    background:#2d3766;
+    transform:translateY(-2px);
+}
+
+/* DELETE BUTTON */
+
+body.dark-mode .delete-table-btn{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+body.dark-mode .delete-table-btn:hover{
+    background:#572b2b;
+    transform:translateY(-2px);
+}
+
+/* ICON SIZE */
+
+body.dark-mode .table-btn i{
+    font-size:18px;
+}
+
+/* TABLE ROW */
+
+body.dark-mode .users-table tbody tr{
+    border-color:#2b3047;
+}
+
+/* TABLE TEXT */
+
+body.dark-mode .users-table td{
+    color:#fff;
+}
+
+/* USER INFO */
+
+body.dark-mode .user-info h4{
+    color:#fff;
+}
+
+body.dark-mode .user-info p{
+    color:#aeb4d0;
+}
+
+/* =================================
+   REVIEW MODAL DARK MODE
+================================= */
+
+/* OVERLAY */
+
+body.dark-mode .review-modal{
+    background:rgba(0,0,0,0.65);
+}
+
+/* GLASS CARD */
+
+body.dark-mode .review-modal-card{
+
+    background:rgba(20,24,38,0.78);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.45);
+}
+
+/* CLOSE BUTTON */
+
+body.dark-mode .close-review-modal{
+
+    background:rgba(255,255,255,0.08);
+
+    color:#fff;
+}
+
+body.dark-mode .close-review-modal:hover{
+    background:rgba(255,255,255,0.14);
+}
+
+/* USER */
+
+body.dark-mode .review-modal-avatar{
+    background:#5b6cff;
+    color:#fff;
+}
+
+body.dark-mode .review-modal-user h3{
+    color:#fff;
+}
+
+body.dark-mode .review-modal-user p{
+    color:#aeb4d0;
+}
+
+/* STARS */
+
+body.dark-mode .review-modal-rating i{
+    color:#ffc83d;
+}
+
+/* ORIGINAL REVIEW */
+
+body.dark-mode .original-review{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+body.dark-mode .original-review small{
+    color:#8e95b8;
+}
+
+body.dark-mode .original-review p{
+    color:#d5d8ea;
+}
+
+/* LABEL */
+
+body.dark-mode .reply-box label{
+    color:#fff;
+}
+
+/* TEXTAREA */
+
+body.dark-mode .reply-box textarea{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    color:#fff;
+}
+
+body.dark-mode .reply-box textarea::placeholder{
+    color:#8e95b8;
+}
+
+/* CANCEL BUTTON */
+
+body.dark-mode .cancel-review-btn{
+
+    background:#2a3048;
+
+    color:#fff;
+}
+
+body.dark-mode .cancel-review-btn:hover{
+    background:#353d5a;
+}
+
+/* SEND BUTTON */
+
+body.dark-mode .send-review-btn{
+
+    background:#5b6cff;
+
+    color:#fff;
+}
+
+body.dark-mode .send-review-btn:hover{
+
+    background:#7280ff;
+
+    transform:translateY(-2px);
+}
+
+/* =================================
+   QUICK ACTIONS DARK MODE
+================================= */
+
+body.dark-mode .action-card{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .action-card:hover{
+
+    background:#20253a;
+}
+
+/* TITLE */
+
+body.dark-mode .action-card h4{
+    color:#fff;
+}
+
+/* TEXT */
+
+body.dark-mode .action-card p{
+    color:#aeb4d0;
+}
+
+/* ARROW */
+
+body.dark-mode .action-arrow{
+    color:#8e95b8;
+}
+
+body.dark-mode .action-card:hover .action-arrow{
+    color:#fff;
+}
+
+/* ICON COLORS */
+
+body.dark-mode .blue{
+    background:#22294a;
+    color:#93a0ff;
+}
+
+body.dark-mode .red{
+    background:#402222;
+    color:#ff7d7d;
+}
+
+body.dark-mode .purple{
+    background:#32214f;
+    color:#ba9cff;
+}
+
+body.dark-mode .orange{
+    background:#3d3213;
+    color:#f5c84c;
+}

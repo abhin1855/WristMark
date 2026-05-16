@@ -1,0 +1,621 @@
+<!-- Returns.html -->
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Returns</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/return.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <h2>Returns</h2>
+
+                <span>/</span>
+
+                <p>Manage Return Requests</p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="returns-container">
+
+            <!-- TOOLBAR -->
+
+            <div class="returns-toolbar">
+
+                <!-- SEARCH -->
+
+                <div class="returns-search">
+
+                    <i class="ri-search-line"></i>
+
+                    <input type="text" placeholder="Search return requests...">
+
+                </div>
+
+                <!-- FILTERS -->
+
+                <div class="return-filters">
+
+                    <button class="active-filter">
+                        All
+                    </button>
+
+                    <button>
+                        Pending
+                    </button>
+
+                    <button>
+                        Approved
+                    </button>
+
+                    <button>
+                        Rejected
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- STATS -->
+
+            <div class="return-stats">
+
+                <div class="return-stat-card">
+
+                    <i class="ri-arrow-go-back-line"></i>
+
+                    <div>
+
+                        <h3>48</h3>
+
+                        <p>Total Returns</p>
+
+                    </div>
+
+                </div>
+
+                <div class="return-stat-card">
+
+                    <i class="ri-time-line"></i>
+
+                    <div>
+
+                        <h3>12</h3>
+
+                        <p>Pending Requests</p>
+
+                    </div>
+
+                </div>
+
+                <div class="return-stat-card">
+
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+
+                        <h3>31</h3>
+
+                        <p>Approved Returns</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RETURN LIST -->
+
+            <div class="return-list">
+
+                <!-- CARD -->
+
+                <div class="return-card">
+
+                    <div class="return-header">
+
+                        <div class="return-user">
+
+                            <div class="return-avatar">
+                                AM
+                            </div>
+
+                            <div>
+
+                                <h4>Arjun Menon</h4>
+
+                                <span>Order #WM-1041</span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="return-status pending-status">
+                            Pending
+                        </span>
+
+                    </div>
+
+                    <div class="return-watch">
+
+                        <img src="{% static 'images/watch1.png' %}" alt="Watch">
+
+                        <div>
+
+                            <h3>Rolex Submariner</h3>
+
+                            <p>
+                                Return reason: Product damaged during delivery.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="return-footer">
+
+                        <span>Requested on 13 May 2026</span>
+
+                        <div class="return-actions">
+
+                            <button class="approve-btn">
+                                Approve
+                            </button>
+
+                            <button class="reject-btn">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="return-card">
+
+                    <div class="return-header">
+
+                        <div class="return-user">
+
+                            <div class="return-avatar">
+                                PN
+                            </div>
+
+                            <div>
+
+                                <h4>Priya Nair</h4>
+
+                                <span>Order #WM-1034</span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="return-status approved-status">
+                            Approved
+                        </span>
+
+                    </div>
+
+                    <div class="return-watch">
+
+                        <img src="{% static 'images/watch2.png' %}" alt="Watch">
+
+                        <div>
+
+                            <h3>Casio G-Shock</h3>
+
+                            <p>
+                                Return reason: Wrong watch model received.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="return-footer">
+
+                        <span>Requested on 10 May 2026</span>
+
+                        <div class="return-actions">
+
+                            <button class="view-btn" onclick="openReturnModal()">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="return-card">
+
+                    <div class="return-header">
+
+                        <div class="return-user">
+
+                            <div class="return-avatar">
+                                SK
+                            </div>
+
+                            <div>
+
+                                <h4>Sneha Kumar</h4>
+
+                                <span>Order #WM-1028</span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="return-status rejected-status">
+                            Rejected
+                        </span>
+
+                    </div>
+
+                    <div class="return-watch">
+
+                        <img src="{% static 'images/watch3.png' %}" alt="Watch">
+
+                        <div>
+
+                            <h3>Titan Neo</h3>
+
+                            <p>
+                                Return reason: Used beyond return policy period.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="return-footer">
+
+                        <span>Requested on 08 May 2026</span>
+
+                        <div class="return-actions">
+
+                            <button class="view-btn">
+                                View Details
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+      <!-- RETURN DETAILS MODAL -->
+
+<div class="return-modal" id="returnModal">
+
+    <!-- GLASS CARD -->
+
+    <div class="return-modal-card">
+
+        <!-- CLOSE -->
+
+        <button class="close-modal" onclick="closeReturnModal()">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- HEADER -->
+
+        <div class="modal-header">
+
+            <div class="modal-user">
+
+                <div class="modal-avatar">
+                    AM
+                </div>
+
+                <div>
+
+                    <h3>Arjun Menon</h3>
+
+                    <p>Order #WM-1041</p>
+
+                </div>
+
+            </div>
+
+            <span class="return-status pending-status">
+                Pending
+            </span>
+
+        </div>
+
+        <!-- WATCH -->
+
+        <div class="modal-watch">
+
+            <img src="{% static 'images/watch1.png' %}" alt="watch">
+
+            <div>
+
+                <h2>Rolex Submariner</h2>
+
+                <p>
+                    Luxury Collection
+                </p>
+
+                <h4>₹4,25,000</h4>
+
+            </div>
+
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="modal-details">
+
+            <div class="detail-box">
+
+                <small>Return Reason</small>
+
+                <p>
+                    Product damaged during delivery.
+                    The outer packaging was broken and
+                    scratches were visible on the watch body.
+                </p>
+
+            </div>
+
+            <div class="detail-grid">
+
+                <div class="detail-item">
+
+                    <small>Requested On</small>
+
+                    <h4>13 May 2026</h4>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <small>Payment Method</small>
+
+                    <h4>UPI Payment</h4>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <small>Return Type</small>
+
+                    <h4>Refund</h4>
+
+                </div>
+
+                <div class="detail-item">
+
+                    <small>Order Status</small>
+
+                    <h4>Delivered</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ACTIONS -->
+
+        <div class="modal-actions">
+
+            <button class="reject-btn">
+
+                Reject
+
+            </button>
+
+            <button class="approve-btn">
+
+                Approve Return
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+<script>
+
+function openReturnModal(){
+
+    document
+    .getElementById("returnModal")
+    .classList.add("active");
+
+}
+
+function closeReturnModal(){
+
+    document
+    .getElementById("returnModal")
+    .classList.remove("active");
+
+}
+
+</script>
+
+</body>
+</html>

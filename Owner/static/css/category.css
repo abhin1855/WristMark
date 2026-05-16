@@ -701,3 +701,109 @@
         align-items:flex-start;
     }
 }
+
+/* =========================
+   ADD CATEGORY DARK MODE
+========================= */
+
+body.dark-mode .add-category-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+/* HEADER */
+
+body.dark-mode .category-header h3,
+body.dark-mode .input-group label,
+body.dark-mode .category-upload label,
+body.dark-mode .upload-box h4,
+body.dark-mode .category-status h4{
+    color:#fff;
+}
+
+body.dark-mode .category-header p,
+body.dark-mode .upload-box p,
+body.dark-mode .category-status p{
+    color:#aeb4d0;
+}
+
+/* INPUTS */
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group select,
+body.dark-mode .input-group textarea{
+    background:#111522;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+/* PLACEHOLDER */
+
+body.dark-mode .input-group input::placeholder,
+body.dark-mode .input-group textarea::placeholder{
+    color:#8e95b8;
+}
+
+/* SELECT */
+
+body.dark-mode .input-group select{
+    color:#fff;
+}
+
+/* INPUT FOCUS */
+
+body.dark-mode .input-group input:focus,
+body.dark-mode .input-group select:focus,
+body.dark-mode .input-group textarea:focus{
+    border-color:#5b6cff;
+}
+
+/* UPLOAD BOX */
+
+body.dark-mode .upload-box{
+    background:#111522;
+    border-color:#39415f;
+}
+
+body.dark-mode .upload-box:hover{
+    border-color:#5b6cff;
+}
+
+body.dark-mode .upload-box i{
+    color:#fff;
+}
+
+/* STATUS BOX */
+
+body.dark-mode .category-status{
+    background:#111522;
+}
+
+/* SWITCH */
+
+body.dark-mode .slider{
+    background:#39415f;
+}
+
+body.dark-mode .switch input:checked + .slider{
+    background:#5b6cff;
+}
+
+/* BUTTONS */
+
+body.dark-mode .cancel-btn{
+    background:#2a3048;
+    color:#fff;
+}
+
+body.dark-mode .cancel-btn:hover{
+    background:#353d5a;
+}
+
+body.dark-mode .save-btn{
+    background:#5b6cff;
+}
+
+body.dark-mode .save-btn:hover{
+    background:#7280ff;
+}

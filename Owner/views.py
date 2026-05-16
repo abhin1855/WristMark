@@ -28,3 +28,12 @@ def category_page(request):
 def add_category(request):
     return render(request,"Add_Category.html")
 
+def promotion_page(request):
+    return render(request,"Promotion.html")
+
+def review_page(request):
+    return render(request,"Review.html")
+
+def returns_page(request):
+    return render(request,"Return.html")
+

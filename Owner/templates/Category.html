@@ -35,95 +35,101 @@
             <p>OWNER PANEL</p>
         </div>
 
-        <!-- MENU -->
-
         <div class="menu-section">
-
             <p class="menu-title">MAIN</p>
 
             <ul>
-
                 <li>
                     <a class="menu-link" href="{% url 'dashboard' %}">
-                        <i class="ri-dashboard-line"></i>
-                        Dashboard
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'watch_page' %}">
                         <i class="ri-time-line"></i>
-                        Watches
+                        <span>Watches</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'order_page' %}">
-                        <i class="ri-file-list-3-line"></i>
-                        Orders
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
                     </a>
                 </li>
 
                 <li>
                     <a class="menu-link" href="{% url 'buyer_page' %}">
-                        <i class="ri-group-line"></i>
-                        Buyers
+                    <i class="ri-group-line"></i>
+                    Buyers
                     </a>
                 </li>
-
             </ul>
-
         </div>
 
-        <!-- STORE -->
-
         <div class="menu-section">
-
             <p class="menu-title">STORE</p>
 
             <ul>
-
                 <li class="active">
-                    <a class="menu-link" href="#">
-                        <i class="ri-menu-line"></i>
-                        Categories
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
                     </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
                     <i class="ri-price-tag-3-line"></i>
                     Promotions
-                </li>
-
-                <li>
-                    <i class="ri-star-line"></i>
-                    Reviews
-                </li>
-
-                <li>
-                    <i class="ri-arrow-go-back-line"></i>
-                    Returns
-                </li>
-
-            </ul>
-
-        </div>
-
-        <!-- BOTTOM -->
-
-        <div class="bottom-menu">
-
-            <ul>
-
-                <li>
-                    <a class="menu-link" href="{% url 'profile_page' %}">
-                        <i class="ri-user-line"></i>
-                        Profile
                     </a>
                 </li>
 
+                <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
             </ul>
 
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
         </div>
 
     </aside>
@@ -191,7 +197,6 @@
 
             <!-- CATEGORY GRID -->
 
-            <!-- CATEGORY TYPES -->
 
 <div class="category-types">
 
@@ -346,30 +351,6 @@
                 <span>₹4,25,000</span>
             </div>
 
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch2.png' %}" alt="">
-                <h4>Omega Speedmaster</h4>
-                <span>₹3,20,000</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch3.png' %}" alt="">
-                <h4>Tag Heuer</h4>
-                <span>₹2,40,000</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch1.png' %}" alt="">
-                <h4>Cartier Elite</h4>
-                <span>₹5,80,000</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch2.png' %}" alt="">
-                <h4>Hublot Prime</h4>
-                <span>₹6,10,000</span>
-            </div>
-
         </div>
 
     </div>
@@ -398,30 +379,6 @@
         </div>
 
         <div class="mini-watch-grid">
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch2.png' %}" alt="">
-                <h4>Casio G-Shock</h4>
-                <span>₹8,500</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch3.png' %}" alt="">
-                <h4>Garmin X5</h4>
-                <span>₹22,000</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch1.png' %}" alt="">
-                <h4>Suunto Core</h4>
-                <span>₹18,500</span>
-            </div>
-
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch2.png' %}" alt="">
-                <h4>Polar Extreme</h4>
-                <span>₹16,999</span>
-            </div>
 
             <div class="mini-watch-card">
                 <img src="{% static 'images/watch3.png' %}" alt="">
@@ -459,28 +416,39 @@
         <div class="mini-watch-grid">
 
             <div class="mini-watch-card">
-                <img src="{% static 'images/watch1.png' %}" alt="">
-                <h4>Titan Neo</h4>
-                <span>₹5,500</span>
-            </div>
-
-            <div class="mini-watch-card">
                 <img src="{% static 'images/watch2.png' %}" alt="">
-                <h4>Fastrack Reflex</h4>
-                <span>₹3,999</span>
+                <h4>Casio Classic</h4>
+                <span>₹3,600</span>
             </div>
 
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch3.png' %}" alt="">
-                <h4>Sonata Prime</h4>
-                <span>₹2,800</span>
+        </div>
+
+    </div>
+
+    <!-- DIGITAL -->
+
+    <div class="watch-type-section">
+
+        <div class="watch-type-header">
+
+            <div class="watch-type-title">
+
+                <div class="type-icon casual">
+                    <i class="ri-watch-line"></i>
+                </div>
+
+                <div>
+                    <h3>Digital Watches</h3>
+                    <p>Smart and Modern wearables</p>
+                </div>
+
             </div>
 
-            <div class="mini-watch-card">
-                <img src="{% static 'images/watch1.png' %}" alt="">
-                <h4>Timex Casual</h4>
-                <span>₹4,100</span>
-            </div>
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="mini-watch-grid">
 
             <div class="mini-watch-card">
                 <img src="{% static 'images/watch2.png' %}" alt="">

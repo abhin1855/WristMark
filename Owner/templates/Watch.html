@@ -43,8 +43,10 @@
                 </li>
 
                 <li class="active">
-                    <i class="ri-time-line"></i>
-                    Watches
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
                 </li>
 
                 <li>
@@ -69,24 +71,32 @@
 
             <ul>
                 <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
                     <i class="ri-menu-line"></i>
                     Categories
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
                     <i class="ri-price-tag-3-line"></i>
                     Promotions
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
                     <i class="ri-star-line"></i>
                     Reviews
+                    </a>
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
                     <i class="ri-arrow-go-back-line"></i>
                     Returns
                     <span class="badge">2</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -119,7 +129,6 @@
         </div>
 
     </aside>
-
     <!-- MAIN CONTENT -->
     <main class="main-content">
 

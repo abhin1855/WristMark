@@ -179,3 +179,64 @@
         min-width:1000px;
     }
 }
+
+/* =================================
+   TABLE ACTION BUTTONS
+================================= */
+
+.table-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+/* COMMON BUTTON */
+
+.table-btn{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+
+    font-size:18px;
+}
+
+/* VIEW BUTTON */
+
+.edit-table-btn{
+    background:#eef2ff;
+    color:#4353ff;
+}
+
+.edit-table-btn:hover{
+    background:#dfe5ff;
+    transform:translateY(-2px);
+}
+
+/* DELETE BUTTON */
+
+.delete-table-btn{
+    background:#ffe7e7;
+    color:#d64040;
+}
+
+.delete-table-btn:hover{
+    background:#ffd7d7;
+    transform:translateY(-2px);
+}
+
+/* ICON */
+
+.table-btn i{
+    font-size:18px;
+}
