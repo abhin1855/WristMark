@@ -205,11 +205,11 @@
 
                         </div>
 
-                        <button class="edit-profile-btn">
+                        <button class="edit-profile-btn"
+                                onclick="openProfileModal()">
 
                             <i class="ri-edit-line"></i>
                             Edit Profile
-
                         </button>
 
                     </div>
@@ -230,7 +230,9 @@
 
                         <h3>Personal Information</h3>
 
-                        <button>
+                        <button class="edit-personal-btn"
+                                onclick="openProfileModal()">
+
                             <i class="ri-edit-line"></i>
                         </button>
 
@@ -270,7 +272,9 @@
 
                         <h3>Store Information</h3>
 
-                        <button>
+                        <button class="edit-personal-btn"
+                                onclick="openStoreModal()">
+
                             <i class="ri-edit-line"></i>
                         </button>
 
@@ -343,12 +347,300 @@
 
         </div>
 
+<!-- =================================
+     EDIT PROFILE MODAL
+================================= -->
+
+<div class="profile-modal" id="profileModal">
+
+    <div class="profile-modal-card">
+
+        <!-- CLOSE -->
+
+        <button class="close-profile-modal"
+                onclick="closeProfileModal()">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- HEADER -->
+
+        <div class="profile-modal-header">
+
+            <div class="profile-modal-avatar">
+                WM
+            </div>
+
+            <div>
+
+                <h2>Edit Profile</h2>
+
+                <p>
+                    Update your account information
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form class="profile-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Full Name</label>
+
+                    <input type="text"
+                           value="WristMark Admin">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input type="email"
+                           value="admin@wristmark.com">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Phone</label>
+
+                    <input type="text"
+                           value="+91 9876543210">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Location</label>
+
+                    <input type="text"
+                           value="Kerala, India">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Bio</label>
+
+                <textarea placeholder="About yourself...">Owner and administrator of WristMark Luxury Watches.</textarea>
+
+            </div>
+
+            <div class="profile-modal-actions">
+
+                <button type="button"
+                        class="cancel-profile-btn"
+                        onclick="closeProfileModal()">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="save-profile-btn">
+
+                    <i class="ri-check-line"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- =================================
+     STORE DETAILS MODAL
+================================= -->
+
+<div class="store-modal" id="storeModal">
+
+    <div class="store-modal-card">
+
+        <!-- CLOSE -->
+
+        <button class="close-store-modal"
+                onclick="closeStoreModal()">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- HEADER -->
+
+        <div class="store-modal-header">
+
+            <div class="store-modal-icon">
+
+                <i class="ri-store-2-line"></i>
+
+            </div>
+
+            <div>
+
+                <h2>Edit Store Information</h2>
+
+                <p>
+                    Update your store details and business information
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form class="store-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Store Name</label>
+
+                    <input type="text"
+                           value="WristMark Luxury Watches">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Business Type</label>
+
+                    <input type="text"
+                           value="Luxury Watch Retail">
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Founded Year</label>
+
+                    <input type="text"
+                           value="2025">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Website</label>
+
+                    <input type="text"
+                           value="www.wristmark.com">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Support Email</label>
+
+                <input type="email"
+                       value="support@wristmark.com">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Store Description</label>
+
+                <textarea>Premium luxury watch retailer offering world-class timepieces and exceptional customer service.</textarea>
+
+            </div>
+
+            <div class="store-modal-actions">
+
+                <button type="button"
+                        class="cancel-store-btn"
+                        onclick="closeStoreModal()">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="save-store-btn">
+
+                    <i class="ri-check-line"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
     </main>
 
 </div>
 
 
 <script src="{% static 'js/theme.js' %}"></script>
+
+<script>
+
+function openProfileModal(){
+
+    document
+    .getElementById("profileModal")
+    .classList.add("active");
+
+}
+
+function closeProfileModal(){
+
+    document
+    .getElementById("profileModal")
+    .classList.remove("active");
+
+}
+
+function openStoreModal(){
+
+    document
+    .getElementById("storeModal")
+    .classList.add("active");
+
+}
+
+function closeStoreModal(){
+
+    document
+    .getElementById("storeModal")
+    .classList.remove("active");
+
+}
+
+</script>
 
 
 </body>

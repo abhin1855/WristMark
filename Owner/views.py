@@ -25,6 +25,9 @@ def profile_page(request):
 def category_page(request):
     return render(request,"Category.html")
 
+def category_view_all(request):
+    return render(request,"Category_ViewAll.html")
+
 def add_category(request):
     return render(request,"Add_Category.html")
 
@@ -36,4 +39,8 @@ def review_page(request):
 
 def returns_page(request):
     return render(request,"Return.html")
+
+def settings_page(request):
+    return render(request,"Settings.html")
+
 

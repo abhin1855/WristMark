@@ -15,8 +15,11 @@ urlpatterns = [
 
     path('category/',views.category_page,name="category_page"),
     path('add_category/',views.add_category,name="add_category"),
+    path('category_watches/',views.category_view_all,name="category_watches"),
 
     path('promotion/',views.promotion_page,name="promotion_page"),
     path('return/',views.returns_page,name="return_page"),
     path('review/',views.review_page,name="review_page"),
+
+    path('settings/',views.settings_page,name="settings_page"),
 ]

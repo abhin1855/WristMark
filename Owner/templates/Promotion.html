@@ -191,12 +191,11 @@
 
                 <!-- BUTTON -->
 
-                <a href="#" class="add-promotion-btn">
-
+                <button class="add-promotion-btn"
+                        onclick="openPromotionModal()">
                     <i class="ri-add-line"></i>
                     Add Promotion
-
-                </a>
+                </button>
 
             </div>
 
@@ -370,11 +369,166 @@
 
         </div>
 
+<!-- ADD PROMOTION MODAL -->
+
+<div class="promotion-modal" id="promotionModal">
+
+    <div class="promotion-modal-card">
+
+        <!-- CLOSE -->
+
+        <button class="close-promotion-modal"
+                onclick="closePromotionModal()">
+
+            <i class="ri-close-line"></i>
+
+        </button>
+
+        <!-- HEADER -->
+
+        <div class="promotion-modal-header">
+
+            <div class="promotion-header-icon">
+
+                <i class="ri-price-tag-3-line"></i>
+
+            </div>
+
+            <div>
+
+                <h2>Create Promotion</h2>
+
+                <p>
+                    Create discount campaigns for your watches
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+
+        <form class="promotion-form">
+
+            <div class="form-group">
+
+                <label>Promotion Name</label>
+
+                <input type="text"
+                       placeholder="Luxury Summer Sale">
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Discount (%)</label>
+
+                    <input type="number"
+                           placeholder="25">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Category</label>
+
+                    <select>
+
+                        <option>Luxury</option>
+                        <option>Sports</option>
+                        <option>Casual</option>
+                        <option>Digital</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Start Date</label>
+
+                    <input type="date">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>End Date</label>
+
+                    <input type="date">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                    placeholder="Enter promotion details...">
+                </textarea>
+
+            </div>
+
+            <div class="promotion-modal-actions">
+
+                <button type="button"
+                        class="cancel-promotion-btn"
+                        onclick="closePromotionModal()">
+
+                    Cancel
+
+                </button>
+
+                <button type="submit"
+                        class="save-promotion-btn">
+
+                    <i class="ri-check-line"></i>
+
+                    Create Promotion
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
     </main>
 
 </div>
 
 <script src="{% static 'js/theme.js' %}"></script>
 
+
+<script>
+
+function openPromotionModal(){
+
+    document
+    .getElementById("promotionModal")
+    .classList.add("active");
+
+}
+
+function closePromotionModal(){
+
+    document
+    .getElementById("promotionModal")
+    .classList.remove("active");
+
+}
+
+</script>
 </body>
 </html>

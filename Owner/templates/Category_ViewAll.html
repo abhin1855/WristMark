@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Luxury Watches</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- REMIX ICONS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/category_watches.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'dashboard' %}">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li class="active">
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <a href="{% url 'category_page' %}" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
+
+                <div>
+
+                    <h2>Luxury Watches</h2>
+
+                    <p>24 Products Available</p>
+
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="category-watch-container">
+
+            <!-- CATEGORY HEADER -->
+
+            <div class="category-watch-header">
+
+                <div class="category-title">
+
+                    <div class="type-icon luxury">
+                        <i class="ri-vip-crown-2-line"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>Luxury Watches</h2>
+
+                        <p>
+                            Premium luxury watch collection
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TOOLBAR -->
+
+            <div class="watch-toolbar">
+
+                <div class="watch-search">
+
+                    <i class="ri-search-line"></i>
+
+                    <input
+                        type="text"
+                        placeholder="Search watches..."
+                    >
+
+                </div>
+
+                <div class="watch-actions">
+
+                    <button class="filter-btn">
+
+                        <i class="ri-filter-3-line"></i>
+
+                        Filter
+
+                    </button>
+
+                    <button class="sort-btn">
+
+                        <i class="ri-sort-desc"></i>
+
+                        Sort
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- WATCH GRID -->
+
+            <div class="category-watch-grid">
+
+                <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch1.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Rolex Submariner</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹4,25,000</h3>
+
+                            <span class="stock-tag">
+                                In Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch2.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Omega Speedmaster</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹3,80,000</h3>
+
+                            <span class="stock-tag">
+                                In Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+              <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch2.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Omega Speedmaster</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹3,80,000</h3>
+
+                            <span class="stock-tag">
+                                In Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch3.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Tag Heuer Carrera</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹2,60,000</h3>
+
+                            <span class="stock-tag">
+                                In Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch4.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Tissot PRX</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹75,000</h3>
+
+                            <span class="stock-tag">
+                                Low Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="category-watch-card">
+
+                    <div class="watch-image">
+
+                        <img src="{% static 'images/watch5.png' %}" alt="">
+
+                    </div>
+
+                    <div class="watch-content">
+
+                        <h4>Longines Master</h4>
+
+                        <p>Luxury Collection</p>
+
+                        <div class="watch-footer">
+
+                            <h3>₹1,45,000</h3>
+
+                            <span class="stock-tag">
+                                In Stock
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>

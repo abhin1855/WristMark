@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | WristMark</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>Wrist<span>Mark</span></h2>
+            <p>OWNER PANEL</p>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">MAIN</p>
+
+            <ul>
+                <li class="active">
+                    <i class="ri-dashboard-line"></i>
+                    Dashboard
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'watch_page' %}">
+                        <i class="ri-time-line"></i>
+                        <span>Watches</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'order_page' %}">
+                    <i class="ri-file-list-3-line"></i>
+                    Orders
+                    <span class="badge">4</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'buyer_page' %}">
+                    <i class="ri-group-line"></i>
+                    Buyers
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-section">
+            <p class="menu-title">STORE</p>
+
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'category_page' %}">
+                    <i class="ri-menu-line"></i>
+                    Categories
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'promotion_page' %}">
+                    <i class="ri-price-tag-3-line"></i>
+                    Promotions
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'review_page' %}">
+                    <i class="ri-star-line"></i>
+                    Reviews
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'return_page' %}">
+                    <i class="ri-arrow-go-back-line"></i>
+                    Returns
+                    <span class="badge">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom-menu">
+            <ul>
+                <li>
+                    <a class="menu-link" href="{% url 'profile_page' %}">
+                    <i class="ri-user-line"></i>
+                    Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-link" href="{% url 'settings_page' %}">
+                    <i class="ri-settings-3-line"></i>
+                    Settings
+                    </a>
+                </li>
+            </ul>
+
+            <div class="profile-box">
+                <div class="avatar">WM</div>
+
+                <div>
+                    <h4>Admin</h4>
+                    <p>Owner</p>
+                </div>
+
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-left">
+
+                <a href="{% url 'dashboard' %}" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
+
+                <div>
+                    <h2>Settings /</h2>
+                    <p>Manage your account and store preferences</p>
+                </div>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-moon-line"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SETTINGS LAYOUT -->
+
+        <div class="settings-container">
+
+            <!-- CONTENT -->
+
+            <div class="settings-content">
+
+                <!-- PROFILE -->
+
+                <div class="settings-card">
+
+                    <h3>Profile Settings</h3>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Profile Information</h4>
+                            <p>Update your personal details</p>
+                        </div>
+
+                        <button class="setting-btn">
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- SECURITY -->
+
+                <div class="settings-card">
+
+                    <h3>Security</h3>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Two Factor Authentication</h4>
+                            <p>Add extra security to your account</p>
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox">
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Login Notifications</h4>
+                            <p>Receive login alerts</p>
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox" checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- STORE -->
+
+                <div class="settings-card">
+
+                    <h3>Store Preferences</h3>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Maintenance Mode</h4>
+                            <p>Temporarily disable customer access</p>
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox">
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Low Stock Alerts</h4>
+                            <p>Notify when inventory is running low</p>
+                        </div>
+
+                        <label class="switch">
+
+                            <input type="checkbox" checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <!-- APPEARANCE -->
+
+                <div class="settings-card">
+
+                    <h3>Appearance</h3>
+
+                    <div class="setting-row">
+
+                        <div>
+                            <h4>Dark Mode</h4>
+                            <p>Switch dashboard theme</p>
+                        </div>
+
+                        <button class="setting-btn">
+                            Manage Theme
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="{% static 'js/theme.js' %}"></script>
+
+</body>
+</html>

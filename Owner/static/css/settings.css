@@ -1,0 +1,338 @@
+/* =================================
+   SETTINGS PAGE
+================================= */
+
+.settings-container{
+    padding:32px 28px;
+}
+
+/* GRID */
+
+.settings-content{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+}
+
+/* CARD */
+
+.settings-card{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:24px;
+
+    padding:28px 30px;
+
+    transition:0.3s ease;
+
+    box-shadow:0 4px 18px rgba(0,0,0,0.03);
+}
+
+.settings-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* TITLE */
+
+.settings-card h3{
+
+    margin:0 0 24px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    color:#11132b;
+}
+
+/* ROW */
+
+.setting-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding:18px 0;
+}
+
+.setting-row:not(:last-child){
+
+    border-bottom:1px solid #f1f1f1;
+}
+
+/* TEXT CONTENT */
+
+.setting-row > div{
+
+    flex:1;
+}
+
+/* HEADING */
+
+.setting-row h4{
+
+    margin:0 0 6px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#11132b;
+}
+
+/* DESCRIPTION */
+
+.setting-row p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:#777;
+}
+
+/* BUTTON */
+
+.setting-btn{
+
+    min-width:140px;
+
+    height:46px;
+
+    padding:0 18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#11132b;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s ease;
+}
+
+.setting-btn:hover{
+
+    background:#1d2144;
+
+    transform:translateY(-2px);
+}
+
+/* =================================
+   SWITCH
+================================= */
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:56px;
+
+    height:30px;
+
+    flex-shrink:0;
+}
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+}
+
+.slider{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:#d7d7d7;
+
+    transition:.3s;
+
+    border-radius:30px;
+}
+
+.slider:before{
+
+    position:absolute;
+
+    content:"";
+
+    height:24px;
+
+    width:24px;
+
+    left:3px;
+
+    bottom:3px;
+
+    background:white;
+
+    transition:.3s;
+
+    border-radius:50%;
+}
+
+.switch input:checked + .slider{
+
+    background:#5b6cff;
+}
+
+.switch input:checked + .slider:before{
+
+    transform:translateX(26px);
+}
+
+/* =================================
+   BACK BUTTON
+================================= */
+
+.back-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    color:#11132b;
+
+    margin-right:18px;
+
+    transition:.3s ease;
+}
+
+.back-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,0.05);
+}
+
+/* =================================
+   TOPBAR ADJUSTMENTS
+================================= */
+
+.topbar{
+
+    margin-bottom:24px;
+}
+
+.topbar-left{
+
+    display:flex;
+
+    align-items:center;
+}
+
+.topbar-left h2{
+
+    margin-bottom:4px;
+}
+
+.topbar-left p{
+
+    color:#777;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media(max-width:1000px){
+
+    .settings-content{
+
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .settings-container{
+
+        padding:20px 16px;
+    }
+
+    .settings-card{
+
+        padding:22px;
+    }
+
+    .setting-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:14px;
+    }
+
+    .setting-btn{
+
+        width:100%;
+    }
+}
+
+@media(max-width:500px){
+
+    .settings-card h3{
+
+        font-size:20px;
+    }
+
+    .setting-row h4{
+
+        font-size:15px;
+    }
+
+    .setting-row p{
+
+        font-size:13px;
+    }
+}

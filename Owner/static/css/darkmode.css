@@ -1074,3 +1074,365 @@ body.dark-mode .orange{
     background:#3d3213;
     color:#f5c84c;
 }
+
+/* CATEGORY WATCH PAGE */
+
+body.dark-mode .back-btn,
+body.dark-mode .category-search,
+body.dark-mode .tool-btn{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+
+    color:#fff;
+}
+
+body.dark-mode .category-search input{
+    color:#fff;
+}
+
+body.dark-mode .category-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .watch-card{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .watch-image{
+    background:#111522;
+}
+
+body.dark-mode .watch-content h4,
+body.dark-mode .watch-bottom h3{
+    color:#fff;
+}
+
+body.dark-mode .watch-content p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .stock-badge{
+    background:#17382b;
+    color:#4edba4;
+}
+
+/* CATEGORY WATCHES */
+
+body.dark-mode .watch-search,
+body.dark-mode .sort-btn,
+body.dark-mode .filter-btn{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+body.dark-mode .watch-search input{
+    color:#fff;
+}
+
+body.dark-mode .watch-search input::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .category-watch-card{
+    background:#1a1d2e;
+    border-color:#2b3047;
+}
+
+body.dark-mode .watch-image{
+    background:#111522;
+}
+
+body.dark-mode .watch-content h4,
+body.dark-mode .watch-footer h3,
+body.dark-mode .category-title h2{
+    color:#fff;
+}
+
+body.dark-mode .watch-content p,
+body.dark-mode .category-title p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .stock-tag{
+    background:#17382b;
+    color:#4edba4;
+}
+
+/* =================================
+   PROMOTION MODAL DARK MODE
+================================= */
+
+body.dark-mode .promotion-modal-card{
+
+    background:rgba(20,24,38,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+body.dark-mode .close-promotion-modal{
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+}
+
+body.dark-mode .promotion-modal-header h2{
+    color:#fff;
+}
+
+body.dark-mode .promotion-modal-header p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .form-group label{
+    color:#fff;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    color:#fff;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .cancel-promotion-btn{
+
+    background:#2a3048;
+
+    color:#fff;
+}
+
+body.dark-mode .save-promotion-btn{
+
+    background:#5b6cff;
+}
+
+/* =================================
+   PROFILE MODAL DARK MODE
+================================= */
+
+body.dark-mode .profile-modal-card{
+
+    background:rgba(20,24,38,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+body.dark-mode .close-profile-modal{
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+}
+
+body.dark-mode .profile-modal-avatar{
+
+    background:#5b6cff;
+}
+
+body.dark-mode .profile-modal-header h2{
+    color:#fff;
+}
+
+body.dark-mode .profile-modal-header p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .profile-form label{
+    color:#fff;
+}
+
+body.dark-mode .profile-form input,
+body.dark-mode .profile-form textarea{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    color:#fff;
+}
+
+body.dark-mode .profile-form input::placeholder,
+body.dark-mode .profile-form textarea::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .cancel-profile-btn{
+
+    background:#2a3048;
+
+    color:#fff;
+}
+
+body.dark-mode .save-profile-btn{
+
+    background:#5b6cff;
+}
+
+/* =================================
+   STORE MODAL DARK MODE
+================================= */
+
+body.dark-mode .store-modal-card{
+
+    background:rgba(20,24,38,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+body.dark-mode .close-store-modal{
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+}
+
+body.dark-mode .store-modal-header h2{
+    color:#fff;
+}
+
+body.dark-mode .store-modal-header p{
+    color:#aeb4d0;
+}
+
+body.dark-mode .store-form label{
+    color:#fff;
+}
+
+body.dark-mode .store-form input,
+body.dark-mode .store-form textarea{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    color:#fff;
+}
+
+body.dark-mode .store-form input::placeholder,
+body.dark-mode .store-form textarea::placeholder{
+    color:#8e95b8;
+}
+
+body.dark-mode .cancel-store-btn{
+
+    background:#2a3048;
+
+    color:#fff;
+}
+
+body.dark-mode .save-store-btn{
+
+    background:#5b6cff;
+}
+
+/* =================================
+   SETTINGS PAGE DARK MODE
+================================= */
+
+body.dark-mode .settings-sidebar,
+body.dark-mode .settings-card{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .setting-nav{
+
+    color:#aeb4d0;
+}
+
+body.dark-mode .setting-nav:hover{
+
+    background:#22294a;
+
+    color:#fff;
+}
+
+body.dark-mode .setting-nav.active{
+
+    background:#5b6cff;
+}
+
+body.dark-mode .settings-card h3,
+body.dark-mode .setting-row h4{
+
+    color:#fff;
+}
+
+body.dark-mode .setting-row p{
+
+    color:#aeb4d0;
+}
+
+body.dark-mode .setting-row{
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .setting-btn{
+
+    background:#5b6cff;
+}
+
+/* =================================
+   SETTINGS DARK MODE
+================================= */
+
+body.dark-mode .settings-card{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .settings-card h3,
+body.dark-mode .setting-row h4{
+
+    color:#fff;
+}
+
+body.dark-mode .setting-row p{
+
+    color:#aeb4d0;
+}
+
+body.dark-mode .setting-row:not(:last-child){
+
+    border-color:#2b3047;
+}
+
+body.dark-mode .setting-btn{
+
+    background:#5b6cff;
+}
+
+body.dark-mode .setting-btn:hover{
+
+    background:#7280ff;
+}
+
+body.dark-mode .back-btn{
+
+    background:#1a1d2e;
+
+    border-color:#2b3047;
+
+    color:#fff;
+}
