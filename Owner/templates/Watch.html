@@ -111,20 +111,25 @@
                 </li>
 
                 <li>
+                    <a class="menu-link" href="{% url 'settings_page' %}">
                     <i class="ri-settings-3-line"></i>
                     Settings
+                    </a>
                 </li>
             </ul>
 
             <div class="profile-box">
-                <div class="avatar">WM</div>
+                <a href="{% url 'profile_page' %}" class="profile-link">
+                    <div class="avatar">WM</div>
+                    <div class="profile-info">
+                        <h4>Admin</h4>
+                        <p>Owner</p>
+                    </div>
+                </a>
 
-                <div>
-                    <h4>Admin</h4>
-                    <p>Owner</p>
-                </div>
-
-                <i class="ri-logout-box-r-line"></i>
+                <a href="{#}" class="logout-icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </a>
             </div>
         </div>
 
@@ -135,22 +140,31 @@
         <!-- TOPBAR -->
         <div class="topbar">
 
-            <div>
-                <h2>Watches</h2>
-                <span>/</span>
-                <p>Overview</p>
+            <div class="topbar-left">
+
+                <a href="{% url 'dashboard' %}" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
+
+                <div>
+                    <h2>Watches</h2>
+                    <p>Overview</p>
+                </div>
+
             </div>
 
             <div class="topbar-right">
-                <p>Wed, 13 May 2026</p>
 
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="ri-moon-line"></i>
+                <div class="live-date" id="liveDate"></div>
+
+                <button class="topbar-theme-switch" id="themeToggle">
+                    <span class="topbar-slider">
+                        <i class="ri-sun-line theme-icon"
+                           id="themeIcon"></i>
+                    </span>
+
                 </button>
 
-                <button class="notification-btn">
-                    <i class="ri-notification-3-line"></i>
-                </button>
             </div>
 
         </div>

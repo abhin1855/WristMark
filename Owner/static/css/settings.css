@@ -336,3 +336,77 @@
         font-size:13px;
     }
 }
+
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-switch{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.theme-label{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:#8a8fa3;
+
+    transition:.3s;
+}
+
+.theme-label.active{
+
+    color:#11132b;
+}
+
+.theme-slider-btn{
+
+    width:70px;
+    height:34px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#e6e8ef;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.theme-slider{
+
+    width:28px;
+    height:28px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:3px;
+    left:3px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+/* DARK POSITION */
+
+.theme-slider-btn.dark .theme-slider{
+
+    left:39px;
+}

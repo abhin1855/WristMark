@@ -1,54 +1,123 @@
-/* THEME TOGGLE */
+/* =================================
+   THEME TOGGLE
+================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const toggleBtn = document.getElementById("themeToggle");
+    const sliderBtn = document.getElementById("themeSwitch");
+    const lightLabel = document.getElementById("lightLabel");
+    const darkLabel = document.getElementById("darkLabel");
+    const themeIcon = document.getElementById("themeIcon");
 
-    /* LOAD SAVED THEME */
+    /* =================================
+       APPLY THEME
+    ================================= */
 
-    if(localStorage.getItem("theme") === "dark"){
+    function applyTheme(theme){
 
-        document.body.classList.add("dark-mode");
+        if(theme === "dark"){
+            document.body.classList.add("dark-mode");
 
-        if(toggleBtn){
-            toggleBtn.innerHTML = '<i class="ri-sun-line"></i>';
+            /* SETTINGS PAGE SLIDER */
+
+            if(sliderBtn){
+                sliderBtn.classList.add("dark");
+            }
+
+            /* LABELS */
+
+            if(lightLabel && darkLabel){
+                darkLabel.classList.add("active");
+                lightLabel.classList.remove("active");
+            }
+
+            /* TOPBAR ICON */
+
+            if(themeIcon){
+                themeIcon.classList.remove("ri-sun-line");
+                themeIcon.classList.add("ri-moon-line");
+            }
+        }
+        else{
+            document.body.classList.remove("dark-mode");
+
+            /* SETTINGS PAGE SLIDER */
+
+            if(sliderBtn){
+                sliderBtn.classList.remove("dark");
+            }
+
+            /* LABELS */
+
+            if(lightLabel && darkLabel){
+                lightLabel.classList.add("active");
+                darkLabel.classList.remove("active");
+            }
+
+            /* TOPBAR ICON */
+
+            if(themeIcon){
+                themeIcon.classList.remove("ri-moon-line");
+                themeIcon.classList.add("ri-sun-line");
+            }
         }
     }
 
-    /* TOGGLE BUTTON */
+    /* =================================
+       LOAD SAVED THEME
+    ================================= */
 
-    if(toggleBtn){
+    const savedTheme =
+        localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
 
-        toggleBtn.addEventListener("click", () => {
+    /* =================================
+       TOGGLE FUNCTION
+    ================================= */
 
-            document.body.classList.toggle("dark-mode");
-
-            const icon = toggleBtn.querySelector("i");
-
-            /* DARK MODE */
-
-            if(document.body.classList.contains("dark-mode")){
-
-                localStorage.setItem("theme", "dark");
-
-                icon.classList.remove("ri-moon-line");
-                icon.classList.add("ri-sun-line");
-
-            }
-
-            /* LIGHT MODE */
-
-            else{
-
-                localStorage.setItem("theme", "light");
-
-                icon.classList.remove("ri-sun-line");
-                icon.classList.add("ri-moon-line");
-
-            }
-
-        });
+    function toggleTheme(){
+        const isDark =
+            document.body.classList.contains("dark-mode");
+        const newTheme =
+            isDark ? "light" : "dark";
+        localStorage.setItem("theme", newTheme);
+        applyTheme(newTheme);
 
     }
 
+    /* =================================
+       TOPBAR SWITCH
+    ================================= */
+
+    if(toggleBtn){
+        toggleBtn.addEventListener("click", () => {
+            toggleTheme();
+        });
+    }
+
+    /* =================================
+       SETTINGS PAGE SWITCH
+    ================================= */
+
+    if(sliderBtn){
+        sliderBtn.addEventListener("click", () => {
+            toggleTheme();
+        });
+    }
 });
+
+
+function updateDateTime() {
+    const now = new Date();
+
+    document.getElementById("liveDate").textContent =
+        new Date().toLocaleString("en-IN", {
+            weekday: "short",
+            day: "numeric",
+            month: "short",
+            year: "numeric"
+        });
+}
+
+updateDateTime();

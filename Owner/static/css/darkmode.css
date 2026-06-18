@@ -23,10 +23,18 @@ body.dark-mode .profile-card,
 body.dark-mode .info-card,
 body.dark-mode .watch-search,
 body.dark-mode .filter-btn,
+
 body.dark-mode .topbar{
     background:#1a1d2e;
     border-color:#2b3047;
+}
+
+body.dark-mode .topbar-left h2{
     color:#fff;
+}
+
+body.dark-mode .topbar-left p{
+    color:#aeb4d0;
 }
 
 /* SIDEBAR */
@@ -81,11 +89,23 @@ body.dark-mode table tr{
 /* BUTTONS */
 
 body.dark-mode .notification-btn,
-body.dark-mode .theme-toggle{
-    background:#1a1d2e;
-    border-color:#2b3047;
-    color:#fff;
+
+/* DARK POSITION */
+
+body.dark-mode .topbar-slider{
+    left:37px;
+    background:#5b6cff;
 }
+
+body.dark-mode .topbar-theme-switch{
+    background:#2b3047;
+}
+
+body.dark-mode .theme-icon{
+    color:#ffffff;
+}
+
+
 
 /* HOVER */
 
@@ -1316,11 +1336,8 @@ body.dark-mode .store-form label{
 
 body.dark-mode .store-form input,
 body.dark-mode .store-form textarea{
-
     background:rgba(255,255,255,.05);
-
     border:1px solid rgba(255,255,255,.05);
-
     color:#fff;
 }
 
@@ -1330,14 +1347,11 @@ body.dark-mode .store-form textarea::placeholder{
 }
 
 body.dark-mode .cancel-store-btn{
-
     background:#2a3048;
-
     color:#fff;
 }
 
 body.dark-mode .save-store-btn{
-
     background:#5b6cff;
 }
 
@@ -1347,47 +1361,37 @@ body.dark-mode .save-store-btn{
 
 body.dark-mode .settings-sidebar,
 body.dark-mode .settings-card{
-
     background:#1a1d2e;
-
     border-color:#2b3047;
 }
 
 body.dark-mode .setting-nav{
-
     color:#aeb4d0;
 }
 
 body.dark-mode .setting-nav:hover{
-
     background:#22294a;
-
     color:#fff;
 }
 
 body.dark-mode .setting-nav.active{
-
     background:#5b6cff;
 }
 
 body.dark-mode .settings-card h3,
 body.dark-mode .setting-row h4{
-
     color:#fff;
 }
 
 body.dark-mode .setting-row p{
-
     color:#aeb4d0;
 }
 
 body.dark-mode .setting-row{
-
     border-color:#2b3047;
 }
 
 body.dark-mode .setting-btn{
-
     background:#5b6cff;
 }
 
@@ -1396,43 +1400,70 @@ body.dark-mode .setting-btn{
 ================================= */
 
 body.dark-mode .settings-card{
-
     background:#1a1d2e;
-
     border-color:#2b3047;
 }
 
 body.dark-mode .settings-card h3,
 body.dark-mode .setting-row h4{
-
     color:#fff;
 }
 
 body.dark-mode .setting-row p{
-
     color:#aeb4d0;
 }
 
 body.dark-mode .setting-row:not(:last-child){
-
     border-color:#2b3047;
 }
 
 body.dark-mode .setting-btn{
-
     background:#5b6cff;
 }
 
 body.dark-mode .setting-btn:hover{
-
     background:#7280ff;
 }
 
 body.dark-mode .back-btn{
-
     background:#1a1d2e;
-
     border-color:#2b3047;
-
     color:#fff;
+}
+
+body.dark-mode .logout-icon{
+    color:#aeb4d0;
+}
+
+body.dark-mode .logout-icon:hover{
+    color:#ff7b7b;
+    background:rgba(255,123,123,.15);
+}
+
+/* SETTINGS THEME SWITCH */
+
+body.dark-mode .theme-label.active{
+    color:#fff;
+}
+
+body.dark-mode .theme-slider-btn{
+    background:#2b3047;
+}
+
+body.dark-mode .theme-slider{
+    background:#5b6cff;
+}
+
+body.dark-mode .back-btn{
+    background:#1a1d2e;
+    border-color:#2b3047;
+    color:#fff;
+}
+
+body.dark-mode .back-btn:hover{
+    background:#232741;
+}
+
+body.dark .live-date{
+    color: #fff;
 }

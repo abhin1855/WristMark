@@ -120,14 +120,17 @@
             </ul>
 
             <div class="profile-box">
-                <div class="avatar">WM</div>
+                <a href="{% url 'profile_page' %}" class="profile-link">
+                    <div class="avatar">WM</div>
+                    <div class="profile-info">
+                        <h4>Admin</h4>
+                        <p>Owner</p>
+                    </div>
+                </a>
 
-                <div>
-                    <h4>Admin</h4>
-                    <p>Owner</p>
-                </div>
-
-                <i class="ri-logout-box-r-line"></i>
+                <a href="{#}" class="logout-icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </a>
             </div>
         </div>
 
@@ -139,44 +142,41 @@
     <main class="main-content">
 
         <!-- TOPBAR -->
+    <div class="topbar">
 
-<!-- TOPBAR -->
+            <div class="topbar-left">
 
-<div class="topbar">
+                <a href="{% url 'dashboard' %}" class="back-btn">
+                    <i class="ri-arrow-left-line"></i>
+                </a>
 
-    <div class="topbar-left">
+                <div>
+                    <h2>Add Watches</h2>
+                    <p>Add New Products</p>
+                </div>
 
-        <!-- BACK BUTTON -->
+            </div>
 
-        <a href="{% url 'watch_page' %}" class="back-btn">
-            <i class="ri-arrow-left-line"></i>
-        </a>
+            <div class="topbar-right">
 
-        <div class="topbar-title">
+                <div class="live-date" id="liveDate"></div>
 
-            <h2>Add Watch</h2>
+                <button class="topbar-theme-switch" id="themeToggle">
+                    <span class="topbar-slider">
+                        <i class="ri-sun-line theme-icon"
+                           id="themeIcon"></i>
+                    </span>
 
-            <span>/</span>
+                </button>
 
-            <p>Create New Product</p>
+                <button class="notification-btn">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
-
-    <div class="topbar-right">
-
-        <button class="theme-toggle" id="themeToggle">
-            <i class="ri-moon-line"></i>
-        </button>
-
-        <button class="notification-btn">
-            <i class="ri-notification-3-line"></i>
-        </button>
-
-    </div>
-
-</div>
 
         <!-- FORM SECTION -->
 
